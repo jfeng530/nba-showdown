@@ -6,7 +6,7 @@ export class SearchBar extends Component {
             <div>
                 
             </div>
-        );
+        )
     }
 }
 

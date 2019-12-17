@@ -4,17 +4,19 @@ import SearchBar from '../components/SearchBar'
 
 export class IndexContainer extends Component {
 
-    render() {
-        
-        renderList = () => {
-            if (this.props.teams) {
-                return <List teams={this.props.teams} />
-            }
-            else if (this.props.team) {
-                return <List team={this.props.team} />
-            }
+    renderList = () => {
+        if (this.props.teams) {
+            return <List teams={this.props.teams} />
         }
-
+        else if (this.props.team) {
+            return <List team={this.props.team} />
+        }
+        else if (this.props.season) {
+            return <List season={this.props.season} teamId={this.props.teamId} />
+        }
+    }
+    
+    render() {
         return (
             <div>
                 <SearchBar />

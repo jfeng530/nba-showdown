@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom'
 import IndexContainer from './IndexContainer'
 import PlayerShowContainer from './PlayerShowContainer'
+import CompareContainer from './CompareContainer'
+import HomeContainer from './HomeContainer'
 
 export class MainContainer extends Component {
 
@@ -23,24 +25,37 @@ export class MainContainer extends Component {
         return (
             <>
                 <Switch>
+                    <Route exact path="/">
+                        <HomeContainer />
+                    </Route>
+
                     <Route exact path="/players" >
                         <IndexContainer show={'players'}/>
                     </Route>
 
+                    {/* To render a list of all Teams */}
                     <Route exact path="/teams" >
                         <IndexContainer teams={this.state.teams}/>
                     </Route>
 
+                    {/* To render a Player Show page */}
                     <Route exact path="/players/:id" >
                         {this.renderPlayer}
                     </Route>
 
+                    {/* To render a list of all seasons by a single team */}
                     <Route exact path="/teams/:id" >
                         {this.renderTeamYears}
                     </Route>
 
+                    {/* To render the roster of a specifc Team + Season */}
                     <Route exact path="/teams/:id/:season" >
                         {this.renderTeamRoster}
+                    </Route>
+
+                    {/* To render the compare Players/Teams page */}
+                    <Route exact path="/compare/" >
+                        <CompareContainer />
                     </Route>
                 </Switch>
             </>
@@ -60,7 +75,8 @@ export class MainContainer extends Component {
 
     renderTeamRoster = (renderParams) => {
         const id = parseInt(renderParams.match.params.id)
-        const year = parseInt(renderParams.match.params.season)
+        const season = parseInt(renderParams.match.params.season)
+        return <IndexContainer seasons={season} teamId={id} />
     }
 }
 

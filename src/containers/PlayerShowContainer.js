@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PlayerBio from '../components/PlayerBio'
+import List from '../components/List'
 
 export class PlayerShowContainer extends Component {
 
@@ -15,11 +17,10 @@ export class PlayerShowContainer extends Component {
     }
 
     render() {
-        console.log(this.state.player)
         return (
             <div>
-                <p>{this.state.player.first_name}</p>
-                <p>{this.state.player.last_name}</p>
+                <PlayerBio key={this.state.player.id} player={this.state.player}/>
+                <List player={this.state.player} />
             </div>
         );
     }
