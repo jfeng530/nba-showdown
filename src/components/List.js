@@ -1,28 +1,34 @@
 import React, { Component } from 'react';
 import TeamListItem from './TeamListItem'
+import TemListHeader from '../components/TeamListHeader'
+import TeamListHeader from '../components/TeamListHeader'
+import TeamSeasonsListHeader from '../components/TeamSeasonsListHeader'
 
 export class List extends Component {
+
     render() {
+        
+        const renderListHeader
+        const renderListItems
 
-        const renderListItems = this.props.teams.map(team => <TeamListItem key={team.id} team={team} />)
-
-        // if (this.props.teams) {
-        //     renderListItems = this.props.teams.map(team => <List key={team.id} team={team} />)
-        // }
-
-        console.log(this.props.teams)
-
+        if (this.props.teams) {
+            renderListHeader = <TeamListHeader />
+            renderListItems = this.props.teams.map(team => <TeamListItem key={team.id} team={team} />)
+        } else if (this.props.team) {
+            renderListHeader = <TeamSeasonsListHeader />
+            fetch(`http://localhost:3000/teams/${this.props.team.id}`)
+            .then(r => r.json())
+            .then(team => {
+                renderListItems = team.seasons.map(season => <SeasonListItem key={season.id} season={season} />)
+            })
+        }
+        
         return (
             <table>
-                <tr>
-                    <th>Team Name</th>
-                    <th>ABV</th>
-                    <th>Conference</th>
-                    <th>Division</th>
-                </tr>
+                {renderListHeader}
                 {renderListItems}
             </table>
-        );
+        )
     }
 }
 

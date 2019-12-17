@@ -7,7 +7,8 @@ export class MainContainer extends Component {
 
     state = {
         teams: [],
-        player: {}
+        player: {},
+        roster: []
     }
     
     componentDidMount = async() => {
@@ -49,7 +50,7 @@ export class MainContainer extends Component {
     renderTeamYears = (renderParams) => {
         const id = parseInt(renderParams.match.params.id)
         const team = this.state.teams.find(team => team.id === id)
-        return <IndexContainer team={ team } />
+        return <IndexContainer team={team} />
     }
 
     renderPlayer = (renderParams) => {
