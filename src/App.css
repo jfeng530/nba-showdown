@@ -20,3 +20,18 @@
 .App-link {
   color: #09d3ac;
 }
+
+.navbar{
+  background-color: #1D428A !important;
+  color: white !important;
+}
+
+.navbar-item{
+  background-color: #1D428A !important;
+  color: white !important;
+}
+
+.navbar-item:hover{
+  background-color: white !important;
+  color: #1D428A !important;
+}

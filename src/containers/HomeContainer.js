@@ -3,9 +3,13 @@ import React, { Component } from 'react';
 export class HomeContainer extends Component {
     render() {
         return (
-            <div>
-                Welcome to the BS NBA Database that only goes up to 1979 and doesn't have height and weight of some shitty players (like some dude named Larry Bird)
+            <div className="container ui">
+            <h2 className="ui center aligned icon header ui orange message">
+                <i className="basketball ball icon"></i>
+                BS NBA Database
+            </h2>
             </div>
+
         );
     }
 }
