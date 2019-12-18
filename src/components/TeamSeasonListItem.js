@@ -4,14 +4,16 @@ import { NavLink } from 'react-router-dom'
 const TeamSeasonListItem = (props) => {
 
     const { season } = props;
-
+    const { team } = props;
+    // debugger
     return (
+        
         <>
             <tr>
                 <td>
-                    <NavLink to={"/teams/" + season.teamId + "/" + season.id }>{season.year}</NavLink>
+                    <NavLink to={"/teams/" + team.id + "/" + season.year }>{season.year}</NavLink>
                 </td>
-                <td>{season.team}</td>
+                <td>{team.abbreviation}</td>
                 <td>Their Record Goes Here</td>
             </tr>
         </>

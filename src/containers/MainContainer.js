@@ -4,13 +4,14 @@ import IndexContainer from './IndexContainer'
 import PlayerShowContainer from './PlayerShowContainer'
 import CompareContainer from './CompareContainer'
 import HomeContainer from './HomeContainer'
+import TeamRosterContainer from './TeamRosterContainer'
 
 export class MainContainer extends Component {
 
     state = {
         teams: [],
         player: {},
-        roster: []
+        rosterStats: [],
     }
     
     componentDidMount = async() => {
@@ -64,7 +65,7 @@ export class MainContainer extends Component {
 
     renderTeamYears = (renderParams) => {
         const id = parseInt(renderParams.match.params.id)
-        const team = this.state.teams.find(team => team.id === id)
+        let team = this.state.teams.find(team => team.id === id)
         return <IndexContainer team={team} />
     }
 
@@ -74,9 +75,9 @@ export class MainContainer extends Component {
     }
 
     renderTeamRoster = (renderParams) => {
-        const id = parseInt(renderParams.match.params.id)
-        const season = parseInt(renderParams.match.params.season)
-        return <IndexContainer seasons={season} teamId={id} />
+        const teamId = parseInt(renderParams.match.params.id)
+        const seasonId = parseInt(renderParams.match.params.season)
+        return <TeamRosterContainer teamId={teamId} seasonId={seasonId}/>
     }
 }
 

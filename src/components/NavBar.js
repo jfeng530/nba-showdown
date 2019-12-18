@@ -12,8 +12,6 @@ export class NavBar extends Component {
 
         const { activeItem } = this.state
 
-        let blue = "#1D428A !important"
-
         return (
             // <Menu>
             //     <Link to="/">

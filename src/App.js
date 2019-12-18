@@ -10,7 +10,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <NavContainer />
-        <div class="ui hidden divider middle aligned"></div>
+        <div className="ui hidden divider middle aligned"></div>
         <MainContainer />
       </React.Fragment>
     )
