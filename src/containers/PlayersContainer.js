@@ -6,21 +6,21 @@ import Spinner from 'react-bootstrap/Spinner'
 export class PlayersContainer extends Component {
 
     state = {
-        loaded: false,
-        players: [],
+        // loaded: false,
+        // players: [],
         displayPlayers: []
     }
 
-    componentDidMount(){
-        fetch(`http://localhost:3000/players`)
-        .then(r => r.json())
-        .then(players => {
-            this.setState({
-                loaded: true,
-                players: players
-            })
-        })
-    }
+    // componentDidMount(){
+    //     fetch(`http://localhost:3000/players`)
+    //     .then(r => r.json())
+    //     .then(players => {
+    //         this.setState({
+    //             loaded: true,
+    //             players: players
+    //         })
+    //     })
+    // }
 
     filterPlayers = (event) => {
         let input = event.target.value.toLowerCase()
@@ -30,7 +30,7 @@ export class PlayersContainer extends Component {
             })
         } else {
             this.setState({
-                displayPlayers: this.state.players.filter(player => player.full_name.toLowerCase().includes(input))
+                displayPlayers: this.props.players.filter(player => player.full_name.toLowerCase().includes(input))
             })
         }
     }
@@ -38,8 +38,9 @@ export class PlayersContainer extends Component {
     render() {
         return (
             <div className="ui container center aligned">
-                {this.state.loaded?<SearchBar onChange={this.filterPlayers} />:<Spinner animation="grow" variant="primary"/>}
-                <PlayerList players={this.state.displayPlayers}/>
+                {/* {this.state.loaded?<SearchBar onChange={this.filterPlayers} />:<Spinner animation="grow" variant="primary"/>} */}
+                <SearchBar onChange={this.filterPlayers} />
+                <PlayerList players={this.state.displayPlayers} />
             </div>
         );
     }

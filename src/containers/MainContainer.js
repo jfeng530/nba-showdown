@@ -6,10 +6,13 @@ import CompareContainer from './CompareContainer'
 import HomeContainer from './HomeContainer'
 import TeamRosterContainer from './TeamRosterContainer'
 import PlayersContainer from './PlayersContainer'
+import Spinner from 'react-bootstrap/Spinner'
+
 
 export class MainContainer extends Component {
 
     state = {
+        loaded: false,
         teams: [],
         rosterStats: [],
         players: []
@@ -21,7 +24,12 @@ export class MainContainer extends Component {
         this.setState({
             teams: teams
         })
-        
+        let moreData = await fetch('http://localhost:3000/players')
+        let players = await moreData.json()
+        this.setState({
+            loaded: true,
+            players: players
+        })
     }
 
     render() {
@@ -33,7 +41,8 @@ export class MainContainer extends Component {
                     </Route>
 
                     <Route exact path="/players" >
-                        <PlayersContainer />
+                        {this.state.loaded ? <PlayersContainer players={this.state.players}/> : <Spinner animation="grow" variant="primary"/>}
+                        {/* <PlayersContainer players={this.state.players}/> */}
                     </Route>
 
                     {/* To render a list of all Teams */}
