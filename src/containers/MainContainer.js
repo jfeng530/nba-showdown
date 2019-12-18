@@ -12,6 +12,7 @@ export class MainContainer extends Component {
     state = {
         teams: [],
         rosterStats: [],
+        players: []
     }
     
     componentDidMount = async() => {
@@ -20,6 +21,7 @@ export class MainContainer extends Component {
         this.setState({
             teams: teams
         })
+        
     }
 
     render() {

@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import MainContainer from "./containers/MainContainer"
 import NavContainer from "./containers/NavContainer"
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 class App extends React.Component {
 
