@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PlayerBio from '../components/PlayerBio'
-import List from '../components/List'
+import PlayerStatList from '../containers/PlayerStatList'
 
 export class PlayerShowContainer extends Component {
 
@@ -8,11 +8,13 @@ export class PlayerShowContainer extends Component {
         player: {}
     }
 
-    componentDidMount = async() => {
-        let rawData = await fetch(`http://localhost:3000/players/${this.props.playerId}`)
-        let player = await rawData.json()
-        this.setState({
-            player: player
+    componentWillMount(){
+        fetch(`http://localhost:3000/players/${this.props.playerId}`)
+        .then(r => r.json())
+        .then(player => {
+            this.setState({
+                player: player
+            })
         })
     }
 
@@ -20,7 +22,8 @@ export class PlayerShowContainer extends Component {
         return (
             <div>
                 <PlayerBio key={this.state.player.id} player={this.state.player}/>
-                <List player={this.state.player} />
+                <div className="ui divider"></div>
+                <PlayerStatList playerId={this.props.playerId} />
             </div>
         );
     }

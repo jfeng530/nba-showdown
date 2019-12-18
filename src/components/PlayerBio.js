@@ -5,13 +5,15 @@ const PlayerBio = (props) => {
     const { player } = props
 
     return (
-        <div>
-            <h1>{player.first_name}</h1>
-            <h1>{player.first_name}</h1>
-            <h3>{player.position}</h3>
-            <h3>{player.height_feet}</h3>
-            <h3>{player.height_inches}</h3>
-            <h3>{player.weight_pounds}</h3>
+        <div className="ui centered card">
+            <div className="content">
+                <a className="header">{player.first_name} {player.last_name}</a>
+                <div className="ui list">
+                    <a className="item">Position: {player.position}</a>
+                    <a className="item">Height: {player.height_feet}'{player.height_inches}"</a>
+                    <a className="item">Weight: {player.weight_pounds} lbs</a>
+                </div>
+            </div>
         </div>
     )
 }

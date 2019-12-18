@@ -5,12 +5,12 @@ import PlayerShowContainer from './PlayerShowContainer'
 import CompareContainer from './CompareContainer'
 import HomeContainer from './HomeContainer'
 import TeamRosterContainer from './TeamRosterContainer'
+import PlayersContainer from './PlayersContainer'
 
 export class MainContainer extends Component {
 
     state = {
         teams: [],
-        player: {},
         rosterStats: [],
     }
     
@@ -31,7 +31,7 @@ export class MainContainer extends Component {
                     </Route>
 
                     <Route exact path="/players" >
-                        <IndexContainer show={'players'}/>
+                        <PlayersContainer />
                     </Route>
 
                     {/* To render a list of all Teams */}

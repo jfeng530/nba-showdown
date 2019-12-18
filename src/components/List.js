@@ -17,15 +17,7 @@ export class List extends Component {
         } else if (this.props.team) {
             renderListHeader = <TeamSeasonsListHeader />
             renderListItems = this.props.team.seasons.map(season => <TeamSeasonListItem key={season.id} season={season} team={this.props.team} />)
-        } else if (this.props.player) {
-            // renderListHeader = <TeamRosterListHeader />
-            // console.log('fetch')
-            // fetch(`http://localhost:3000/players/${this.props.player.id}/seasons`)
-            // .then(r => r.json())
-            // .then(stats => {
-            //     renderListItems = stats.map(stat => <TeamRosterListItem key={stat.id} stat={stat}/>)
-            // })
-        }
+        } 
         
         return (
             <div className="container ui center aligned">
