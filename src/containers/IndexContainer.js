@@ -7,7 +7,7 @@ export class IndexContainer extends Component {
     render() {
         return (
             <div>
-                <List team={this.props.team} teams={this.props.teams} rosterStats={this.props.rosterStats} teamId={this.props.teamId}/>
+                <List team={this.props.team} teams={this.props.teams} />
             </div>
         );
     }

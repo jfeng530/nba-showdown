@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import SearchBar from '../components/SearchBar'
 import PlayerList from '../containers/PlayerList'
 import Spinner from 'react-bootstrap/Spinner'
@@ -6,21 +7,8 @@ import Spinner from 'react-bootstrap/Spinner'
 export class PlayersContainer extends Component {
 
     state = {
-        // loaded: false,
-        // players: [],
         displayPlayers: []
     }
-
-    // componentDidMount(){
-    //     fetch(`http://localhost:3000/players`)
-    //     .then(r => r.json())
-    //     .then(players => {
-    //         this.setState({
-    //             loaded: true,
-    //             players: players
-    //         })
-    //     })
-    // }
 
     filterPlayers = (event) => {
         let input = event.target.value.toLowerCase()
@@ -38,7 +26,6 @@ export class PlayersContainer extends Component {
     render() {
         return (
             <div className="ui container center aligned">
-                {/* {this.state.loaded?<SearchBar onChange={this.filterPlayers} />:<Spinner animation="grow" variant="primary"/>} */}
                 <SearchBar onChange={this.filterPlayers} />
                 <PlayerList players={this.state.displayPlayers} />
             </div>
@@ -46,4 +33,8 @@ export class PlayersContainer extends Component {
     }
 }
 
-export default PlayersContainer;
+const mapStateToProps = state => {
+    return { players: state.players }
+}
+
+export default connect(mapStateToProps)(PlayersContainer);

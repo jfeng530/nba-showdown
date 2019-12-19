@@ -17,7 +17,6 @@ export class TeamRosterContainer extends Component {
             })
         })
     }
-
     
     render() {
         let renderListItems = this.state.rosterStats.map(stat => <TeamRosterListItem key={stat.id} stat={stat}/>)

@@ -1,36 +1,36 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom'
+import { connect } from 'react-redux'
 import IndexContainer from './IndexContainer'
 import PlayerShowContainer from './PlayerShowContainer'
 import CompareContainer from './CompareContainer'
 import HomeContainer from './HomeContainer'
 import TeamRosterContainer from './TeamRosterContainer'
 import PlayersContainer from './PlayersContainer'
-import Spinner from 'react-bootstrap/Spinner'
 
 
 export class MainContainer extends Component {
 
     state = {
         loaded: false,
-        teams: [],
-        rosterStats: [],
-        players: []
+        rosterStats: []
+        // teams: [],
+        // players: []
     }
     
-    componentDidMount = async() => {
-        let rawData = await fetch('http://localhost:3000/teams')
-        let teams = await rawData.json()
-        this.setState({
-            teams: teams
-        })
-        let moreData = await fetch('http://localhost:3000/players')
-        let players = await moreData.json()
-        this.setState({
-            loaded: true,
-            players: players
-        })
-    }
+    // componentDidMount = async() => {
+    //     let rawData = await fetch('http://localhost:3000/teams')
+    //     let teams = await rawData.json()
+    //     this.setState({
+    //         teams: teams
+    //     })
+    //     let moreData = await fetch('http://localhost:3000/players')
+    //     let players = await moreData.json()
+    //     this.setState({
+    //         loaded: true,
+    //         players: players
+    //     })
+    // }
 
     render() {
         return (
@@ -41,13 +41,8 @@ export class MainContainer extends Component {
                     </Route>
 
                     <Route exact path="/players" >
-                        {this.state.loaded ? <PlayersContainer players={this.state.players}/> : <Spinner animation="grow" variant="primary"/>}
+                        <PlayersContainer players={this.state.players}/>
                         {/* <PlayersContainer players={this.state.players}/> */}
-                    </Route>
-
-                    {/* To render a list of all Teams */}
-                    <Route exact path="/teams" >
-                        <IndexContainer teams={this.state.teams}/>
                     </Route>
 
                     {/* To render a Player Show page */}
@@ -55,6 +50,11 @@ export class MainContainer extends Component {
                         {this.renderPlayer}
                     </Route>
 
+                    {/* To render a list of all Teams */}
+                    <Route exact path="/teams" >
+                        <IndexContainer teams={this.props.teams}/>
+                    </Route>
+                    
                     {/* To render a list of all seasons by a single team */}
                     <Route exact path="/teams/:id" >
                         {this.renderTeamYears}
@@ -76,7 +76,7 @@ export class MainContainer extends Component {
 
     renderTeamYears = (renderParams) => {
         const id = parseInt(renderParams.match.params.id)
-        let team = this.state.teams.find(team => team.id === id)
+        let team = this.props.teams.find(team => team.id === id)
         return <IndexContainer team={team} />
     }
 
@@ -92,4 +92,8 @@ export class MainContainer extends Component {
     }
 }
 
-export default MainContainer;
+const mapStateToProps = state => {
+    return { teams: state.teams }
+}
+
+export default connect(mapStateToProps)(MainContainer);

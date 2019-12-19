@@ -9,7 +9,6 @@ export class PlayerStatList extends Component {
     }
 
     componentDidMount(){
-        // debugger
         fetch(`http://localhost:3000/players/${this.props.playerId}/stats`)
         .then(r => r.json())
         .then(stats => {
@@ -30,7 +29,7 @@ export class PlayerStatList extends Component {
                     {renderListItems}
                 </table>
             </div>
-        );
+        )
     }
 }
 

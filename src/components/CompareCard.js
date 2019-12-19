@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import ComparePlayerListItem from '../components/ComparePlayerListItem'
+import ComparePlayerSeasons from '../components/ComparePlayerSeasons'
+import CompareInput from '../components/CompareInput'
 
 export class CompareCard extends Component {
 
   state = {
-      players: [],
+      displayPlayers: [],
       selectedPlayer: null,
       selectedPlayerSeasons: []
   }
 
   handleKeyDown = (event) => {
       if (event.key === 'Enter') {
-          fetch(`http://localhost:3000/players?search=${event.target.value}`)
-          .then(r => r.json())
-          .then(players => {
-              this.setState({
-                  players: players
-              })
-          })
+        let input = event.target.value
+        this.setState({
+            displayPlayers: this.props.players.filter(player => player.full_name.toLowerCase().includes(input))
+        })
       }
   }
 
@@ -25,46 +25,50 @@ export class CompareCard extends Component {
       fetch(`http://localhost:3000/players/${player.id}/stats`)
       .then(r => r.json())
       .then(seasons => {
+        // debugger
           this.setState({
+              displayPlayers: [],
               selectedPlayer: player,
               selectedPlayerSeasons: seasons
           })
       })
+      console.log(player.full_name)
   }
 
   handleSeasonClick = (season) => {
       if (this.props.setPlayer1) {
           this.props.setPlayer1(season)
           this.setState({
-              selectedPlayerSeasons: null
+              selectedPlayerSeasons: null,
+              selectedPlayer: null
           })
       } else {
           this.props.setPlayer2(season)
           this.setState({
-              selectedPlayerSeasons: null
+              selectedPlayerSeasons: null,
+              selectedPlayer: null
           })
       }
   }
   
   render() {
-      let renderPlayers = this.state.players.map(player => <ComparePlayerListItem key={player.id} handlePlayerClick={this.handlePlayerClick} player={player}/>)
-
-      // let renderPlayerSeasons = this.state.selectedPlayerSeasons.map(season => <List.Item onClick={this.handleSeasonClick(season)}>{season.year}</List.Item>)
+      let renderPlayers = this.state.displayPlayers.map(player => <ComparePlayerListItem key={player.id} player={player} handlePlayerClick={this.handlePlayerClick}/>)
+      let renderPlayerSeasons = this.state.selectedPlayerSeasons.map(season => <ComparePlayerSeasons key={season.id} season={season} handleSeasonClick={this.handleSeasonClick}/>)
+      
       return (
         <>
-          <div className="ui blue inverted segment">
-            <div className="ui blue inverted form">
-              <label>Player Name</label>
-              <input placeholder='Enter a name' onKeyDown={this.handleKeyDown} />
-            </div>
-          </div>
-          <div className="ui list">
-            {renderPlayers}
-            {this.state.selectedPlayer ? this.renderPlayerSeasons : null}
+          {this.state.selectedPlayer ? null : <CompareInput handleKeyDown={this.handleKeyDown}/>}
+          <div className="ui selection list">
+            {this.state.selectedPlayer ? this.state.selectedPlayer.full_name : renderPlayers}
+            {this.state.selectedPlayer ? renderPlayerSeasons : null}
           </div>
         </>
       )
   }
 }
 
-export default CompareCard;
+const mapStateToProps = state => {
+    return { players: state.players }
+}
+
+export default connect(mapStateToProps)(CompareCard);
