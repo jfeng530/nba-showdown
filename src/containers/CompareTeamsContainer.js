@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CompareTeamBio from '../components/CompareTeamBio'
 import CompareTeamCard from '../components/CompareTeamCard'
-import CompareStats from '../components/CompareStats'
+import CompareTeamStats from '../components/CompareTeamStats'
 
 export class CompareTeamsContainer extends Component {
 

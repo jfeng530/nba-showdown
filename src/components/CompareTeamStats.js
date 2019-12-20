@@ -8,7 +8,7 @@ const CompareTeamStats = (props) => {
 
   return (
     <div>
-      
+      showing stats
     </div>
   );
 }
