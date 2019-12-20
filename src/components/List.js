@@ -17,7 +17,7 @@ export class List extends Component {
         } else if (this.props.team) {
             renderListHeader = <TeamSeasonsListHeader />
             renderListItems = this.props.team.seasons.map(season => <TeamSeasonListItem key={season.id} season={season} team={this.props.team} />)
-        } 
+        }
         
         return (
             <div className="container ui center aligned">

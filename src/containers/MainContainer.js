@@ -7,30 +7,14 @@ import CompareContainer from './CompareContainer'
 import HomeContainer from './HomeContainer'
 import TeamRosterContainer from './TeamRosterContainer'
 import PlayersContainer from './PlayersContainer'
-
+import CompareTeamsContainer from './CompareTeamsContainer'
 
 export class MainContainer extends Component {
 
     state = {
         loaded: false,
         rosterStats: []
-        // teams: [],
-        // players: []
     }
-    
-    // componentDidMount = async() => {
-    //     let rawData = await fetch('http://localhost:3000/teams')
-    //     let teams = await rawData.json()
-    //     this.setState({
-    //         teams: teams
-    //     })
-    //     let moreData = await fetch('http://localhost:3000/players')
-    //     let players = await moreData.json()
-    //     this.setState({
-    //         loaded: true,
-    //         players: players
-    //     })
-    // }
 
     render() {
         return (
@@ -66,8 +50,13 @@ export class MainContainer extends Component {
                     </Route>
 
                     {/* To render the compare Players/Teams page */}
-                    <Route exact path="/compare/" >
+                    <Route exact path="/compareplayers" >
                         <CompareContainer />
+                    </Route>
+
+                    {/* To render the compare Teams page */}
+                    <Route exact path="/compareteams" >
+                        <CompareTeamsContainer />
                     </Route>
                 </Switch>
             </>

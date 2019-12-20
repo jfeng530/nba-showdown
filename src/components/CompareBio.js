@@ -2,7 +2,7 @@ import React from 'react';
 
 const CompareBio = (props) => {
 
-    const { seasonStat } = props;
+    const { seasonStat } = props
 
     return (
         <div className="ui centered card">

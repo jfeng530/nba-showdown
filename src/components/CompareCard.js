@@ -52,6 +52,7 @@ export class CompareCard extends Component {
   }
   
   render() {
+      
       let renderPlayers = this.state.displayPlayers.map(player => <ComparePlayerListItem key={player.id} player={player} handlePlayerClick={this.handlePlayerClick}/>)
       let renderPlayerSeasons = this.state.selectedPlayerSeasons.map(season => <ComparePlayerSeasons key={season.id} season={season} handleSeasonClick={this.handleSeasonClick}/>)
       

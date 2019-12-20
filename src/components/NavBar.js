@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink, Link } from 'react-router-dom'
-import { Menu } from 'semantic-ui-react'
+import { NavLink } from 'react-router-dom'
 
 export class NavBar extends Component {
 
@@ -13,44 +12,6 @@ export class NavBar extends Component {
         const { activeItem } = this.state
 
         return (
-            // <Menu>
-            //     <Link to="/">
-            //         <Menu.Item
-            //             name='home'
-            //             active={activeItem === 'home'}
-            //             onClick={this.handleClick}
-            //         >
-            //             Home
-            //         </Menu.Item>
-            //     </Link>
-            //     <Link to="/teams">
-            //         <Menu.Item
-            //             name='Teams'
-            //             active={activeItem === 'Teams'}
-            //             onClick={this.handleClick}
-            //         >
-            //             Teams
-            //         </Menu.Item>
-            //     </Link>
-            //     <Link to="/players">
-            //         <Menu.Item
-            //             name='players'
-            //             active={activeItem === 'players'}
-            //             onClick={this.handleClick}
-            //         >
-            //             Players
-            //         </Menu.Item>
-            //     </Link>
-            //     <Link to="/compare">
-            //         <Menu.Item
-            //             name='compare'
-            //             active={activeItem === 'compare'}
-            //             onClick={this.handleClick}
-            //         >
-            //             Compare Players
-            //         </Menu.Item>
-            //     </Link>
-            // </Menu>
             <div className="container ui">
                 <div className="ui menu navbar" >
                     <NavLink exact to="/" className="item navbar-item">
@@ -63,8 +24,11 @@ export class NavBar extends Component {
                         Teams
                     </NavLink>
                     <div className="right menu">
-                        <NavLink to="/compare" className="ui item navbar-item">
+                        <NavLink to="/compareplayers" className="ui item navbar-item">
                             Compare Players
+                        </NavLink>
+                        <NavLink to="/compareteams" className="ui item navbar-item">
+                            Compare Teams
                         </NavLink>
                     </div>
                 </div>

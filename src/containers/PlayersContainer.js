@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import SearchBar from '../components/SearchBar'
 import PlayerList from '../containers/PlayerList'
-import Spinner from 'react-bootstrap/Spinner'
 
 export class PlayersContainer extends Component {
 

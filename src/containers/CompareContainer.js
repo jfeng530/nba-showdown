@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import CompareCard from '../components/CompareCard'
-import CompareStatsColumn from '../components/CompareStatsColumn'
 import CompareBio from '../components/CompareBio'
 import CompareStats from '../components/CompareStats'
-import { Grid } from 'semantic-ui-react'
 
 export class CompareContainer extends Component {
 
