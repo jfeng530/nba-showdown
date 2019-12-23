@@ -12,7 +12,6 @@ export class PlayerStatList extends Component {
         fetch(`http://localhost:3000/players/${this.props.playerId}/stats`)
         .then(r => r.json())
         .then(stats => {
-            // let sortedStats = stats.sort(function(a, b){return a.season.year - b.season.year})
             this.setState({
                 stats: stats.sort(function(a, b){return a.season.year - b.season.year})
             })
