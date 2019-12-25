@@ -5,11 +5,12 @@ const CompareStats = (props) => {
 
   const { player1stats } = props
   const { player2stats } = props
-  // debugger
+
   return (
     <table className="ui selectable celled table">
       <tbody>
         <CompareStatRow stat={"Season"} stat1={player1stats.season.year} stat2={player2stats.season.year}/>
+        {player1stats.gp > player2stats.gp ? <CompareStatRow stat={"GP"} statclass1={"positive"} statclass2={"negative"} stat1={player1stats.gp} stat2={player2stats.gp}/> : <CompareStatRow stat={"GP"} statclass1={"negative"} statclass2={"positive"} stat1={player1stats.gp} stat2={player2stats.gp}/>}
         {player1stats.fgm > player2stats.fgm ? <CompareStatRow stat={"FGM"} statclass1={"positive"} statclass2={"negative"} stat1={player1stats.fgm} stat2={player2stats.fgm}/> : <CompareStatRow stat={"FGM"} statclass1={"negative"} statclass2={"positive"} stat1={player1stats.fgm} stat2={player2stats.fgm}/>}
         {player1stats.fga > player2stats.fga ? <CompareStatRow stat={"FGA"} statclass1={"positive"} statclass2={"negative"} stat1={player1stats.fga} stat2={player2stats.fga}/> : <CompareStatRow stat={"FGA"} statclass1={"negative"} statclass2={"positive"} stat1={player1stats.fga} stat2={player2stats.fga}/>}
         {player1stats.fg3m > player2stats.fg3m ? <CompareStatRow stat={"3PM"} statclass1={"positive"} statclass2={"negative"} stat1={player1stats.fg3m} stat2={player2stats.fg3m}/> : <CompareStatRow stat={"3PM"} statclass1={"negative"} statclass2={"positive"} stat1={player1stats.fg3m} stat2={player2stats.fg3m}/>}
