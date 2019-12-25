@@ -8,6 +8,7 @@ import HomeContainer from './HomeContainer'
 import TeamRosterContainer from './TeamRosterContainer'
 import PlayersContainer from './PlayersContainer'
 import CompareTeamsContainer from './CompareTeamsContainer'
+import SimulateContainer from './SimulateContainer'
 
 export class MainContainer extends Component {
 
@@ -57,6 +58,10 @@ export class MainContainer extends Component {
                     {/* To render the compare Teams page */}
                     <Route exact path="/compareteams" >
                         <CompareTeamsContainer />
+                    </Route>
+
+                    <Route exact path="/simulate">
+                        <SimulateContainer />
                     </Route>
                 </Switch>
             </>

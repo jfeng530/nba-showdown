@@ -30,6 +30,9 @@ export class NavBar extends Component {
                         <NavLink to="/compareteams" className="ui item navbar-item">
                             Compare Teams
                         </NavLink>
+                        <NavLink to="/simulate" className="ui item navbar-item">
+                            Simulate Game
+                        </NavLink>
                     </div>
                 </div>
             </div>
