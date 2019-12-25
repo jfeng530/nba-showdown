@@ -2,31 +2,17 @@ import React, {Component} from 'react';
 import { NavLink } from 'react-router-dom'
 
 export class TeamRosterListItem extends Component {
-
-    state = {
-        gp: 0
-    }
-
-    // componentDidMount(){
-    //     fetch(`https://www.balldontlie.io/api/v1/season_averages?season=${this.props.stat.season.year}&player_ids[]=${this.props.stat.player.public_id}`)
-    //     .then(r => r.json())
-    //     .then(response => {
-    //         this.setState({
-    //             gp: response.data[0].games_played
-    //         })
-    //     })
-    // }
    
     render(){
 
         const { stat } = this.props
 
         return (
-            <tr>
+            <tr className="center aligned">
                 <td>
                     <NavLink to={"/players/" + stat.player.id }>{stat.player.first_name} {stat.player.last_name}</NavLink>
                 </td>
-                <td>{this.state.gp}</td>
+                <td>{stat.gp}</td>
                 <td>{stat.fgm}</td>
                 <td>{stat.fga}</td>
                 <td>{stat.fg3m}</td>

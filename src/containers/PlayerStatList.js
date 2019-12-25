@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PlayerStatHeader from '../components/PlayerStatHeader'
 import PlayerStatItem from '../components/PlayerStatItem'
+import SeasonAvgItem from '../components/SeasonAvgItem'
 
 export class PlayerStatList extends Component {
 
@@ -21,10 +22,17 @@ export class PlayerStatList extends Component {
     render() {
 
         let renderListItems = this.state.stats.map(stat => <PlayerStatItem key={stat.id} stat={stat}/>)
+        let renderAvgItems = this.state.stats.map(stat => <SeasonAvgItem key={stat.id} stat={stat}/>)
         
         return (
             <div className="container ui center aligned">
-                <table>
+                <h2>Per Game Averages</h2>
+                <table className="ui sortable celled table">
+                    <PlayerStatHeader />
+                    {renderAvgItems}
+                </table>
+                <h2>Season Totals</h2>
+                <table className="ui sortable celled table">
                     <PlayerStatHeader />
                     {renderListItems}
                 </table>

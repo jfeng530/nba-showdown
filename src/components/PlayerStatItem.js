@@ -5,7 +5,7 @@ const PlayerStatItem = (props) => {
     const { stat } = props
 
     return (
-        <tr>
+        <tr className="center aligned">
             <td>{stat.season.year}</td>
             <td>{stat.season.team.full_name}</td>
             <td>{stat.fgm}</td>
