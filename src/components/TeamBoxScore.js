@@ -41,6 +41,7 @@ const TeamBoxScore = (props) => {
 
   return (
     <>
+      <h4>{teamStats.year}</h4>
       <h2>{teamStats.team.full_name}</h2>
       <table className="ui compact table">
         <thead>

@@ -5,7 +5,7 @@ export class SimBoxScore extends Component {
 
   
   render() {
-    // debugger
+    
     let team1total = 0
     let team2total = 0
   
@@ -26,18 +26,20 @@ export class SimBoxScore extends Component {
        <div className="ui two statistics">
         <div className="statistic">
           <div className="value">
+            <img src={this.props.team1.team.logo} class="ui circular inline image"></img>
             {team1total}
           </div>
           <div>
-            {this.props.team1.team.full_name}
+            {this.props.team1.year} {this.props.team1.team.full_name}
           </div>
         </div>
         <div className="statistic">
           <div className="value">
+            <img src={this.props.team2.team.logo} class="ui circular inline image"></img>
             {team2total}
           </div>
           <div>
-            {this.props.team2.team.full_name}
+            {this.props.team2.year} {this.props.team2.team.full_name}
           </div>
         </div>
        </div>

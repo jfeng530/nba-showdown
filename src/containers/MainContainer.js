@@ -10,6 +10,7 @@ import PlayersContainer from './PlayersContainer'
 import CompareTeamsContainer from './CompareTeamsContainer'
 import SimulateContainer from './SimulateContainer'
 import SimResultContainer from './SimResultContainer'
+import ShowTeams from './ShowTeams'
 
 export class MainContainer extends Component {
 
@@ -38,7 +39,7 @@ export class MainContainer extends Component {
 
                     {/* To render a list of all Teams */}
                     <Route exact path="/teams" >
-                        <IndexContainer teams={this.props.teams}/>
+                        <ShowTeams teams={this.props.teams}/>
                     </Route>
                     
                     {/* To render a list of all seasons by a single team */}

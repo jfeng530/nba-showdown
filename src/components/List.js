@@ -20,12 +20,23 @@ export class List extends Component {
         }
         
         return (
-            <div className="container ui center aligned">
-                <table>
-                    {renderListHeader}
-                    {renderListItems}
-                </table>
+            <div className="ui three column grid">
+                <div className="column">
+                    
+                </div>
+                <div className="column">
+                    <div className="container ui center aligned">
+                        <table>
+                            {renderListHeader}
+                            {renderListItems}
+                        </table>
+                    </div>
+                </div>
+                <div className="column">
+                    
+                </div>
             </div>
+            
         )
     }
 }

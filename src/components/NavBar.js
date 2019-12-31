@@ -3,17 +3,10 @@ import { NavLink } from 'react-router-dom'
 
 export class NavBar extends Component {
 
-    state = {}
-
-    handleClick = (e, {name}) => this.setState({activeItem: name})
-
     render() {
-
-        const { activeItem } = this.state
-
         return (
             <div className="container ui">
-                <div className="ui menu navbar" >
+                <div className="ui top menu navbar" >
                     <NavLink exact to="/" className="item navbar-item">
                         Home
                     </NavLink>

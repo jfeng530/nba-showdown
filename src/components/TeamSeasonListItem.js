@@ -5,7 +5,7 @@ const TeamSeasonListItem = (props) => {
 
     const { season } = props;
     const { team } = props;
-    // debugger
+    
     return (
         
         <>
@@ -13,8 +13,6 @@ const TeamSeasonListItem = (props) => {
                 <td>
                     <NavLink to={"/teams/" + team.id + "/" + season.year }>{season.year}</NavLink>
                 </td>
-                <td>{team.abbreviation}</td>
-                <td>Their Record Goes Here</td>
             </tr>
         </>
     );
