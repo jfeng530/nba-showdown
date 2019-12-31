@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CompareTeamBio from '../components/CompareTeamBio'
 import CompareTeamCard from '../components/CompareTeamCard'
 import CompareTeamStats from '../components/CompareTeamStats'
+import CompareTeamAvg from '../components/CompareTeamAvg'
 
 export class CompareTeamsContainer extends Component {
 
@@ -52,7 +53,8 @@ export class CompareTeamsContainer extends Component {
                   {this.state.team2 ? <CompareTeamBio resetTeam2={this.resetTeam2} team={this.state.team2} roster={this.state.team2roster}/> : <CompareTeamCard setTeam2={this.setTeam2}/>} 
               </div>
           </div>
-          {this.state.team1roster.length === 0 || this.state.team2roster.length === 0 ? null  : <CompareTeamStats team1roster={this.state.team1roster} team2roster={this.state.team2roster}/>}
+          {this.state.team1roster.length === 0 || this.state.team2roster.length === 0 ? null : <CompareTeamAvg team1roster={this.state.team1roster} team2roster={this.state.team2roster}/>}
+          {this.state.team1roster.length === 0 || this.state.team2roster.length === 0 ? null : <CompareTeamStats team1roster={this.state.team1roster} team2roster={this.state.team2roster}/>}
       </div>
     )
   }

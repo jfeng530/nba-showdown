@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TeamBoxScore from "./TeamBoxScore"
 
 export class SimBoxScore extends Component {
 
@@ -7,7 +8,7 @@ export class SimBoxScore extends Component {
     // debugger
     let team1total = 0
     let team2total = 0
-
+  
     this.props.team1.stats.forEach(stat => {
       team1total += stat.sim.fg2m * 2
       team1total += stat.sim.fg3m * 3
@@ -39,7 +40,10 @@ export class SimBoxScore extends Component {
             {this.props.team2.team.full_name}
           </div>
         </div>
-       </div> 
+       </div>
+       <br></br>
+       <TeamBoxScore teamStats={this.props.team1}/>
+       <TeamBoxScore teamStats={this.props.team2}/>
       </>
     );
   }

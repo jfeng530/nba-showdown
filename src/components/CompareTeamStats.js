@@ -75,6 +75,8 @@ const CompareTeamStats = (props) => {
   })
   
   return (
+    <>
+    <h2>Season Totals</h2>
     <table className="ui selectable celled table">
       <tbody>
         <CompareStatRow stat={"Season"} stat1={team1roster[0].season.year} stat2={team2roster[0].season.year}/>
@@ -95,6 +97,7 @@ const CompareTeamStats = (props) => {
         {pts1 > pts2 ? <CompareStatRow stat={"PTS"} statclass1={"positive"} statclass2={"negative"} stat1={pts1} stat2={pts2}/> : <CompareStatRow stat={"PTS"} statclass1={"negative"} statclass2={"positive"} stat1={pts1} stat2={pts2}/>}
       </tbody>
     </table>
+    </>
   );
 }
 
