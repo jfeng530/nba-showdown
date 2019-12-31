@@ -36,9 +36,7 @@ export class CompareContainer extends Component {
                         {this.state.player2 ? <CompareBio seasonStat={this.state.player2} /> : <CompareCard setPlayer2={this.setPlayer2}/>} 
                     </div>
                 </div>
-                <h2>Season Totals</h2>
                 {this.state.player1 && this.state.player2 ? <CompareStats player1stats={this.state.player1} player2stats={this.state.player2}/> : null}
-                <h2>Season Averages</h2>
                 {this.state.player1 && this.state.player2 ? <CompareAvgStats player1stats={this.state.player1} player2stats={this.state.player2}/> : null}
             </div>
         )

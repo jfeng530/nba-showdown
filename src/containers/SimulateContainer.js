@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import CompareTeamBio from '../components/CompareTeamBio'
+import SimTeamBio from '../components/SimTeamBio'
 import CompareTeamCard from '../components/CompareTeamCard'
-import CompareTeamStats from '../components/CompareTeamStats'
+import { NavLink } from 'react-router-dom'
 
 export class SimulateContainer extends Component {
+  
   state = {
     team1: null,
     team1roster: [],
@@ -12,8 +13,6 @@ export class SimulateContainer extends Component {
   }
 
   setTeam1 = (teamRoster, team) => {
-    console.log(teamRoster)
-    console.log(team)
     this.setState({
       team1: team,
       team1roster: teamRoster
@@ -21,11 +20,23 @@ export class SimulateContainer extends Component {
   }
 
   setTeam2 = (teamRoster, team) => {
-    console.log(teamRoster)
-    console.log(team)
     this.setState({
       team2: team,
       team2roster: teamRoster
+    })
+  }
+
+  resetTeam1 = () => {
+    this.setState({
+      team1: null,
+      team1roster: []
+    })
+  }
+
+  resetTeam2 = () => {
+    this.setState({
+      team2: null,
+      team2roster: []
     })
   }
 
@@ -34,15 +45,15 @@ export class SimulateContainer extends Component {
       <div className="ui container">
           <div className="ui two column grid">
               <div className="column">
-                  {this.state.team1 ? <CompareTeamBio team={this.state.team1} /> : <CompareTeamCard setTeam1={this.setTeam1}/>}
+                  {this.state.team1 && this.state.team1roster ? <SimTeamBio resetTeam1={this.resetTeam1} team={this.state.team1} roster={this.state.team1roster}/> : <CompareTeamCard setTeam1={this.setTeam1}/>}
               </div>
               <div className="column">
-                  {this.state.team2 ? <CompareTeamBio team={this.state.team2} /> : <CompareTeamCard setTeam2={this.setTeam2}/>} 
+                  {this.state.team2 && this.state.team2roster ? <SimTeamBio resetTeam2={this.resetTeam2} team={this.state.team2} roster={this.state.team2roster}/> : <CompareTeamCard setTeam2={this.setTeam2}/>} 
               </div>
           </div>
-          {this.state.team1 && this.state.team2 ? <button>Start Simulation</button> : null}
+          {this.state.team1roster.length !== 0 && this.state.team2roster.length !== 0 ? <NavLink to={"/simulate/" + this.state.team1roster[0].season.id + "/" + this.state.team2roster[0].season.id}><button className="ui inverted orange button">Start Simulation</button></NavLink> : null}
       </div>
-    );
+    )
   }
 }
 

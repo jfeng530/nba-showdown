@@ -11,7 +11,6 @@ export class CompareTeamCard extends Component {
   }
 
   handleTeamClick = (team) => {
-    // console.log(team)
     fetch(`http://localhost:3000/teams/${team.id}`)
     .then(r => r.json())
     .then(res => {

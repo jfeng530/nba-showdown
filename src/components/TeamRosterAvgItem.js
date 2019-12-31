@@ -13,10 +13,13 @@ const TeamRosterAvgItem = (props) => {
             <td>{stat.gp}</td>
             <td>{Math.round((stat.fgm/stat.gp) * 10)/10}</td>
             <td>{Math.round((stat.fga/stat.gp) * 10)/10}</td>
+            <td>{Math.round((stat.fgm/stat.fga) * 1000)/1000}</td>
             <td>{Math.round((stat.fg3m/stat.gp) * 10)/10}</td>
             <td>{Math.round((stat.fg3a/stat.gp) * 10)/10}</td>
+            <td>{Math.round((stat.fg3m/stat.fg3a) * 1000)/1000}</td>
             <td>{Math.round((stat.ftm/stat.gp) * 10)/10}</td>
             <td>{Math.round((stat.fta/stat.gp) * 10)/10}</td>
+            <td>{Math.round((stat.ftm/stat.fta) * 1000)/1000}</td>
             <td>{Math.round((stat.oreb/stat.gp) * 10)/10}</td>
             <td>{Math.round((stat.dreb/stat.gp) * 10)/10}</td>
             <td>{Math.round((stat.reb/stat.gp) * 10)/10}</td>

@@ -9,6 +9,7 @@ import TeamRosterContainer from './TeamRosterContainer'
 import PlayersContainer from './PlayersContainer'
 import CompareTeamsContainer from './CompareTeamsContainer'
 import SimulateContainer from './SimulateContainer'
+import SimResultContainer from './SimResultContainer'
 
 export class MainContainer extends Component {
 
@@ -63,9 +64,19 @@ export class MainContainer extends Component {
                     <Route exact path="/simulate">
                         <SimulateContainer />
                     </Route>
+
+                    <Route exact path="/simulate/:teamone/:teamtwo">
+                        {this.renderSimResults}
+                    </Route>
                 </Switch>
             </>
         );
+    }
+
+    renderSimResults = (renderParams) => {
+        const season1id = parseInt(renderParams.match.params.teamone)
+        const season2id = parseInt(renderParams.match.params.teamtwo)
+        return <SimResultContainer season1={season1id} season2={season2id} />
     }
 
     renderTeamYears = (renderParams) => {
@@ -77,7 +88,7 @@ export class MainContainer extends Component {
     renderPlayer = (renderParams) => {
         const id = parseInt(renderParams.match.params.id)
         return <PlayerShowContainer playerId={ id } />
-    }
+    } 
 
     renderTeamRoster = (renderParams) => {
         const teamId = parseInt(renderParams.match.params.id)

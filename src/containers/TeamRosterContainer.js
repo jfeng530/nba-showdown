@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TeamRosterListHeader from '../components/TeamRosterListHeader'
+import TeamRosterAvgHeader from '../components/TeamRosterAvgHeader'
 import TeamRosterListItem from '../components/TeamRosterListItem'
 import TeamRosterAvgItem from '../components/TeamRosterAvgItem'
 
@@ -14,7 +15,9 @@ export class TeamRosterContainer extends Component {
         .then(r => r.json())
         .then(rosterStats => {
             this.setState({
-                rosterStats: rosterStats
+                rosterStats: rosterStats.sort(function(a, b) {
+                    return a.gp - b.gp
+                })
             })
         })
     }
@@ -25,12 +28,12 @@ export class TeamRosterContainer extends Component {
         return (
             <div className="container ui center aligned">
                 <h2>Season Averages</h2>
-                <table className="ui sortable celled table">
-                    <TeamRosterListHeader />
+                <table className="ui sortable striped celled compact table">
+                    <TeamRosterAvgHeader />
                     {renderAvgItems}
                 </table>
                 <h2>Season Totals</h2>
-                <table className="ui sortable celled table">
+                <table className="ui sortable striped celled compact table">
                     <TeamRosterListHeader />
                     {renderListItems}
                 </table>

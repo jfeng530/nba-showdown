@@ -1,18 +1,20 @@
 import React from 'react';
 
-const PlayerStatHeader = () => {
+const TeamRosterAvgHeader = () => {
     return (
         <thead>
             <tr className="center aligned">
-                <th>Name</th>
-                <th>Team</th>
-                <th>GP</th>
+                <th >Name</th>
+                <th>G</th>
                 <th>FG</th>
                 <th>FGA</th>
+                <th>FG%</th>
                 <th>3P</th>
                 <th>3PA</th>
+                <th>3P%</th>
                 <th>FT</th>
                 <th>FTA</th>
+                <th>FT%</th>
                 <th>ORB</th>
                 <th>DRB</th>
                 <th>TRB</th>
@@ -27,5 +29,4 @@ const PlayerStatHeader = () => {
     );
 }
 
-export default PlayerStatHeader;
-
+export default TeamRosterAvgHeader;

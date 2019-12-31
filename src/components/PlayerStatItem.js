@@ -8,6 +8,7 @@ const PlayerStatItem = (props) => {
         <tr className="center aligned">
             <td>{stat.season.year}</td>
             <td>{stat.season.team.full_name}</td>
+            <td>{stat.gp}</td>
             <td>{stat.fgm}</td>
             <td>{stat.fga}</td>
             <td>{stat.fg3m}</td>

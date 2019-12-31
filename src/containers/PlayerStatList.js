@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PlayerStatHeader from '../components/PlayerStatHeader'
+import PlayerAvgHeader from '../components/PlayerAvgHeader'
 import PlayerStatItem from '../components/PlayerStatItem'
 import SeasonAvgItem from '../components/SeasonAvgItem'
 
@@ -27,12 +28,12 @@ export class PlayerStatList extends Component {
         return (
             <div className="container ui center aligned">
                 <h2>Per Game Averages</h2>
-                <table className="ui sortable celled table">
-                    <PlayerStatHeader />
+                <table className="ui sortable celled compact table">
+                    <PlayerAvgHeader />
                     {renderAvgItems}
                 </table>
                 <h2>Season Totals</h2>
-                <table className="ui sortable celled table">
+                <table className="ui sortable celled compact table">
                     <PlayerStatHeader />
                     {renderListItems}
                 </table>

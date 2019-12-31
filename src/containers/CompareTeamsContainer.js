@@ -13,8 +13,6 @@ export class CompareTeamsContainer extends Component {
   }
 
   setTeam1 = (teamRoster, team) => {
-    console.log(teamRoster)
-    console.log(team)
     this.setState({
       team1: team,
       team1roster: teamRoster
@@ -22,28 +20,41 @@ export class CompareTeamsContainer extends Component {
   }
 
   setTeam2 = (teamRoster, team) => {
-    console.log(teamRoster)
-    console.log(team)
     this.setState({
       team2: team,
       team2roster: teamRoster
     })
   }
 
+  resetTeam1 = () => {
+    this.setState({
+      team1: null,
+      team1roster: []
+    })
+  }
+
+  resetTeam2 = () => {
+    this.setState({
+      team2: null,
+      team2roster: []
+    })
+  }
+
   render() {
+
     return (
       <div className="ui container">
           <div className="ui two column grid">
               <div className="column">
-                  {this.state.team1 ? <CompareTeamBio team={this.state.team1} /> : <CompareTeamCard setTeam1={this.setTeam1}/>}
+                  {this.state.team1 ? <CompareTeamBio resetTeam1={this.resetTeam1} team={this.state.team1} roster={this.state.team1roster}/> : <CompareTeamCard setTeam1={this.setTeam1}/>}
               </div>
               <div className="column">
-                  {this.state.team2 ? <CompareTeamBio team={this.state.team2} /> : <CompareTeamCard setTeam2={this.setTeam2}/>} 
+                  {this.state.team2 ? <CompareTeamBio resetTeam2={this.resetTeam2} team={this.state.team2} roster={this.state.team2roster}/> : <CompareTeamCard setTeam2={this.setTeam2}/>} 
               </div>
           </div>
-          {this.state.team1 && this.state.team2 ? <CompareTeamStats team1roster={this.state.team1roster} team2roster={this.state.team2roster}/> : null}
+          {this.state.team1roster.length === 0 || this.state.team2roster.length === 0 ? null  : <CompareTeamStats team1roster={this.state.team1roster} team2roster={this.state.team2roster}/>}
       </div>
-    );
+    )
   }
 }
 
