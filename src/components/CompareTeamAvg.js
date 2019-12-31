@@ -137,7 +137,6 @@ const CompareTeamAvg = (props) => {
   let toPerGame2 = Math.round((turnover2/games2)*10)/10
   let pfPerGame2 = Math.round((pf2/games2)*10)/10
 
-  // debugger
   return (
     <>
     <h2>Season Averages</h2>

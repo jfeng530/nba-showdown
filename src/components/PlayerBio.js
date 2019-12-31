@@ -3,7 +3,7 @@ import React from 'react';
 const PlayerBio = (props) => {
 
     const { player } = props
-
+    debugger
     return (
         <div className="ui centered card">
             <div className="content">
