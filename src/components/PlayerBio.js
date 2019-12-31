@@ -3,15 +3,25 @@ import React from 'react';
 const PlayerBio = (props) => {
 
     const { player } = props
-    debugger
+    const { teams } = props
+
+    let renderTeamLogos = teams.map(team => <img className="ui tiny image" src={team.logo} />)
+    // debugger
     return (
-        <div className="ui centered card">
-            <div className="content">
-                <a className="header">{player.first_name} {player.last_name}</a>
-                <div className="ui list">
-                    <a className="item">Position: {player.position}</a>
-                    <a className="item">Height: {player.height_feet}'{player.height_inches}"</a>
-                    <a className="item">Weight: {player.weight_pounds} lbs</a>
+        <div className="ui internally celled grid">
+            <div className="row">
+                <div className="eight wide column">
+                    <h1 className="ui header">
+                        {player.first_name} {player.last_name}
+                        <div className="sub header">Position: {player.position}</div>
+                        <div className="sub header">Height: {player.height_feet}'{player.height_inches}"</div>
+                        <div className="sub header">Weight: {player.weight_pounds}</div>
+                    </h1>
+                </div>
+                <div className="eight wide column">
+                    <div className="ui tiny images">
+                        {renderTeamLogos}
+                    </div>
                 </div>
             </div>
         </div>

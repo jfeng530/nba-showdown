@@ -5,7 +5,8 @@ import PlayerStatList from '../containers/PlayerStatList'
 export class PlayerShowContainer extends Component {
 
     state = {
-        player: {}
+        player: {},
+        teams: []
     }
 
     componentWillMount(){
@@ -16,12 +17,19 @@ export class PlayerShowContainer extends Component {
                 player: player
             })
         })
+        fetch(`http://localhost:3000/players/${this.props.playerId}/teams`)
+        .then(r => r.json())
+        .then(teams => {
+            this.setState({
+                teams: teams
+            })
+        })
     }
 
     render() {
         return (
             <div>
-                <PlayerBio key={this.state.player.id} player={this.state.player}/>
+                <PlayerBio key={this.state.player.id} teams={this.state.teams} player={this.state.player}/>
                 <div className="ui divider"></div>
                 <PlayerStatList playerId={this.props.playerId} />
             </div>
