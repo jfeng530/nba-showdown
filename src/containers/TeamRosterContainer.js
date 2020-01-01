@@ -3,11 +3,14 @@ import TeamRosterListHeader from '../components/TeamRosterListHeader'
 import TeamRosterAvgHeader from '../components/TeamRosterAvgHeader'
 import TeamRosterListItem from '../components/TeamRosterListItem'
 import TeamRosterAvgItem from '../components/TeamRosterAvgItem'
+import TeamBio from '../components/TeamBio'
 
 export class TeamRosterContainer extends Component {
 
     state = {
-        rosterStats: []
+        rosterStats: [],
+        team: {},
+        year: 0
     }
 
     componentDidMount(){
@@ -20,6 +23,13 @@ export class TeamRosterContainer extends Component {
                 })
             })
         })
+        fetch(`http://localhost:3000/teams/${this.props.teamId}`)
+        .then(r => r.json())
+        .then(team => {
+            this.setState({
+                team: team
+            })
+        })
     }
     
     render() {
@@ -27,6 +37,8 @@ export class TeamRosterContainer extends Component {
         let renderAvgItems = this.state.rosterStats.map(stat => <TeamRosterAvgItem key={stat.id} stat={stat}/>)
         return (
             <div className="container ui center aligned">
+                <TeamBio team={this.state.team} year={this.state.rosterStats[0]}/>
+                <br></br>
                 <h2>Season Averages</h2>
                 <table className="ui sortable striped celled compact table">
                     <TeamRosterAvgHeader />

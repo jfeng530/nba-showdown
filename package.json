@@ -14,8 +14,9 @@
     "react-slick": "^0.25.2",
     "react-spinners": "^0.6.1",
     "redux": "^4.0.4",
+    "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.2",
-    "semantic-ui-css": "^2.4.1"
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "start": "react-scripts start",

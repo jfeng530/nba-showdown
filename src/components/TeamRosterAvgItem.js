@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 const TeamRosterAvgItem = (props) => {
 
     const { stat } = props
-
+    
     return (
         <tr className="center aligned">
             <td>
