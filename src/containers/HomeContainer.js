@@ -8,8 +8,8 @@ export class HomeContainer extends Component {
                 <div className="ui grid">
 
                     <header className="ui container" id="title">
-                        <h1 className="ui center aligned icon header" style={{
-                            color: "orange",
+                        <h1 className="ui center aligned icon header sign" style={{
+                            color: "rgb(238, 135, 51)",
                             background: "rgb(0, 0, 0)",
                             background: "rgba(0, 0, 0, 0.05)",
                             width: "100%",
@@ -17,9 +17,9 @@ export class HomeContainer extends Component {
                             }}>
                             <div className="ui hidden divider"></div>
                             <i className="basketball ball icon"/>
-                            BS NBA Database
+                            Hockey
                         </h1>
-                        <p style={{color: "rgb(29, 66, 138)"}}>A Worst Version of Basketball Reference and ESPN</p>
+                        <p className="desc" style={{color: "rgb(29, 66, 138)"}}>A Worst Version of Basketball Reference and ESPN</p>
                     </header>
 
                     <div className="ui hidden divider"></div>
