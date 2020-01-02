@@ -43,3 +43,16 @@
   padding: 128px 16px;
 }
 
+.icon {
+  width: 25%;
+  height: 25%;
+  margin: auto;
+  object-fit: center;
+  display: inline-block;
+	transition-duration: .3s;
+	transition-property: transform;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}

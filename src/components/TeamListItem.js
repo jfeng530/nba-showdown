@@ -6,14 +6,15 @@ const TeamListItem = (props) => {
     const { team } = props;
 
     return (
+        <>
+        <br></br>
         <NavLink to={"/teams/" + team.id}>
             <div className="item">
-                <img className="ui avatar image" src={team.logo} alt={team.full_name}/>
-                <div className="content">
-                    <div className="description">{team.full_name}</div>    
-                </div>
+                <img className="icon" src={team.logo} alt={team.full_name}/>
             </div>
         </NavLink>
+        <br></br>
+        </>
     );
 
 }
