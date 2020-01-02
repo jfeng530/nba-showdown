@@ -32,6 +32,8 @@ class App extends React.Component {
         <div className="ui container center aligned">
           {this.state.loaded ? <MainContainer/> : <Spinner animation="grow" variant="primary"/>}
         </div>
+        <br></br>
+        <br></br>
       </React.Fragment>
     )
   }

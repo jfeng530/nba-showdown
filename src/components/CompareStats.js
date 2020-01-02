@@ -9,7 +9,7 @@ const CompareStats = (props) => {
   return (
     <>
     <h2>Season Total</h2>
-    <table className="ui selectable celled table">
+    <table className="ui small selectable celled table">
       <tbody>
         <CompareStatRow stat={"Season"} stat1={player1stats.season.year} stat2={player2stats.season.year}/>
         {player1stats.gp > player2stats.gp ? <CompareStatRow stat={"GP"} statclass1={"positive"} statclass2={"negative"} stat1={player1stats.gp} stat2={player2stats.gp}/> : <CompareStatRow stat={"GP"} statclass1={"negative"} statclass2={"positive"} stat1={player1stats.gp} stat2={player2stats.gp}/>}

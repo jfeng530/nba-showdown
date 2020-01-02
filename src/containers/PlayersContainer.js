@@ -25,6 +25,11 @@ export class PlayersContainer extends Component {
     render() {
         return (
             <div className="ui container center aligned">
+                <h4 class="ui horizontal divider header">
+                    <i class="basketball ball icon"></i>
+                    Search Players
+                </h4>
+                <br></br>
                 <SearchBar onChange={this.filterPlayers} />
                 <PlayerList players={this.state.displayPlayers} />
             </div>

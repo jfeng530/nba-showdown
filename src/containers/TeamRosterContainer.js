@@ -42,12 +42,16 @@ export class TeamRosterContainer extends Component {
                 <h2>Season Averages</h2>
                 <table className="ui sortable striped celled compact table">
                     <TeamRosterAvgHeader />
+                    <tbody>
                     {renderAvgItems}
+                    </tbody>
                 </table>
                 <h2>Season Totals</h2>
                 <table className="ui sortable striped celled compact table">
                     <TeamRosterListHeader />
+                    <tbody>
                     {renderListItems}
+                    </tbody>
                 </table>
             </div>
         );

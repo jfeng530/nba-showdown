@@ -6,7 +6,7 @@ export class IndexContainer extends Component {
 
     render() {
         return (
-            <div>
+            <div className="ui center aligned container">
                 <List team={this.props.team} teams={this.props.teams} />
             </div>
         );

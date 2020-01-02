@@ -10,7 +10,7 @@ const TeamListItem = (props) => {
         <br></br>
         <NavLink to={"/teams/" + team.id}>
             <div className="item">
-                <img className="icon" src={team.logo} alt={team.full_name}/>
+                <img className="logo" src={team.logo} alt={team.full_name}/>
             </div>
         </NavLink>
         <br></br>

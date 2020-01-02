@@ -5,7 +5,7 @@ const PlayerBio = (props) => {
     const { player } = props
     const { teams } = props
 
-    let renderTeamLogos = teams.map(team => <img className="ui tiny image" src={team.logo} />)
+    let renderTeamLogos = teams.map(team => <img className="ui tiny image" src={team.logo} alt={team.full_name}/>)
     // debugger
     return (
         <div className="ui internally celled grid">

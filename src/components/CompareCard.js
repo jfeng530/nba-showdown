@@ -32,7 +32,6 @@ export class CompareCard extends Component {
               selectedPlayerSeasons: seasons
           })
       })
-      console.log(player.full_name)
   }
 
   handleSeasonClick = (season) => {

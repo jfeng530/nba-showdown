@@ -26,6 +26,11 @@
   color: white !important;
 }
 
+.thing{
+  background-color: #1D428A !important;
+  color: white !important;
+}
+
 .navbar-item{
   background-color: rgb(29, 66, 138) !important;
   color: white !important;
@@ -43,7 +48,7 @@
   padding: 128px 16px;
 }
 
-.icon {
+.logo {
   width: 25%;
   height: 25%;
   margin: auto;
@@ -53,6 +58,6 @@
 	transition-property: transform;
 }
 
-.icon:hover {
+.logo:hover {
   transform: scale(1.1);
 }

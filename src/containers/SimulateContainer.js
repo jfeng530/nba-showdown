@@ -43,6 +43,10 @@ export class SimulateContainer extends Component {
   render() {
     return (
       <div className="ui container">
+        <h4 class="ui horizontal divider header">
+          <i class="gamepad icon"></i>
+          Simulate
+        </h4>
           <div className="ui two column grid">
               <div className="column">
                   {this.state.team1 && this.state.team1roster ? <SimTeamBio resetTeam1={this.resetTeam1} team={this.state.team1} roster={this.state.team1roster}/> : <CompareTeamCard setTeam1={this.setTeam1}/>}

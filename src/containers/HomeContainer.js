@@ -7,20 +7,6 @@ export class HomeContainer extends Component {
             <div className="ui center aligned container">
                 <div className="ui grid">
 
-                    {/* THE TITLE CARD */}
-                    {/* <div className="ui container home">
-                        <h2 className="ui center aligned icon header">
-                            <i className="basketball ball icon"/>
-                            BS NBA Database
-                        </h2>
-                    </div> */}
-
-                    {/* <header class="w3-container w3-red w3-center" style={{padding: "128px 16px"}}>
-                        <h1 class="w3-margin w3-jumbo">START PAGE</h1>
-                        <p class="w3-xlarge">Template by w3.css</p>
-                        <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
-                    </header> */}
-
                     <header className="ui container" id="title">
                         <h1 className="ui center aligned icon header" style={{
                             color: "orange",
@@ -42,7 +28,7 @@ export class HomeContainer extends Component {
 
                     <div className="two column row">
                         <div className="column">
-                            <img className="ui large rounded image" src="http://i.imgur.com/kuyqOdO.png"/>
+                            <img className="ui large rounded image" src="http://i.imgur.com/kuyqOdO.png" alt="Player Profile"/>
                         </div>
                         <div className="column">
                             <h2 className="header">Player Profiles</h2>
@@ -58,8 +44,8 @@ export class HomeContainer extends Component {
                         </div>
                     </div>
 
-                    <div class="ui hidden divider"></div>
-                    <div class="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
 
                     <div className="two column row">
                         <div className="column">
@@ -75,16 +61,16 @@ export class HomeContainer extends Component {
                             </div>
                         </div>
                         <div className="column">
-                            <img className="ui large rounded image" src="http://i.imgur.com/bVFypps.png"/>
+                            <img className="ui large rounded image" src="http://i.imgur.com/bVFypps.png" alt="Team Profile"/>
                         </div>
                     </div>
 
-                    <div class="ui hidden divider"></div>
-                    <div class="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
 
                     <div className="two column row">
                         <div className="column">
-                            <img className="ui large rounded image" src="http://i.imgur.com/QHy2sjA.png"/>
+                            <img className="ui large rounded image" src="http://i.imgur.com/QHy2sjA.png" alt="Player Comparison Chart"/>
                         </div>
                         <div className="column">
                             <h2 className="header">Player Comparison Chart</h2>
@@ -101,27 +87,8 @@ export class HomeContainer extends Component {
                     </div>
 
 
-                    <div class="ui hidden divider"></div>
-                    <div class="ui hidden divider"></div>
-
-                    {/* <div className="ui items">
-                        <div className="item">
-                            <div className="content">
-                                <br></br>
-                                <h2 className="header">Simulate Game</h2>
-                                <br></br>
-                                <div className="description">
-                                    <p>Simulate a game between any team from any era.</p>
-                                    <p>View the box score of the simulated game, with accurate and reliable results.</p>
-                                    <br></br>
-                                    <NavLink to="/teams">
-                                        <button className="ui inverted orange button">Simulate a Game</button>
-                                    </NavLink>
-                                </div>
-                            </div>
-                            <img className="ui large rounded image" src="http://i.imgur.com/AVGQO4p.png"/>
-                        </div>
-                    </div> */}
+                    <div className="ui hidden divider"></div>
+                    <div className="ui hidden divider"></div>
 
                     <div className="two column row">
                         <div className="column">
@@ -137,7 +104,7 @@ export class HomeContainer extends Component {
                             </div>
                         </div>
                         <div className="column">
-                            <img className="ui large rounded image" src="http://i.imgur.com/AVGQO4p.png"/>
+                            <img className="ui large rounded image" src="http://i.imgur.com/AVGQO4p.png" alt="Simulation of Game"/>
                         </div>
                     </div>
 

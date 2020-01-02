@@ -26,7 +26,7 @@ export class SimBoxScore extends Component {
        <div className="ui two statistics">
         <div className="statistic">
           <div className="value">
-            <img src={this.props.team1.team.logo} class="ui circular inline image"></img>
+            <img src={this.props.team1.team.logo} className="ui rounded inline image" alt={this.props.team1.team.full_name}></img>
             {team1total}
           </div>
           <div>
@@ -35,7 +35,7 @@ export class SimBoxScore extends Component {
         </div>
         <div className="statistic">
           <div className="value">
-            <img src={this.props.team2.team.logo} class="ui circular inline image"></img>
+            <img src={this.props.team2.team.logo} className="ui rounded inline image" alt={this.props.team2.team.full_name}></img>
             {team2total}
           </div>
           <div>

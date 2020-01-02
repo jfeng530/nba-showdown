@@ -7,10 +7,8 @@ export class PlayerList extends Component {
         const renderPlayers = this.props.players.map(player => <PlayerListItem key={player.id} player={player}/>)
 
         return (
-            <div className="container ui center aligned">
-                <table>
-                    {renderPlayers}
-                </table>
+            <div className="ui very relaxed animated list">
+                {renderPlayers}
             </div>
         );
     }

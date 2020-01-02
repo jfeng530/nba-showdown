@@ -12,14 +12,12 @@ export class CompareContainer extends Component {
     }
 
     setPlayer1 = (seasonStat) => {
-        console.log(seasonStat)
         this.setState({
             player1: seasonStat
         })
     }
 
     setPlayer2 = (seasonStat) => {
-        console.log(seasonStat)
         this.setState({
             player2: seasonStat
         })
@@ -28,6 +26,11 @@ export class CompareContainer extends Component {
     render() {
         return (
             <div className="ui container">
+                <h4 class="ui horizontal divider header">
+                    <i class="sync icon"></i>
+                    Compare Players
+                </h4>
+                <br></br>
                 <div className="ui two column grid">
                     <div className="column">
                         {this.state.player1 ? <CompareBio seasonStat={this.state.player1} /> : <CompareCard setPlayer1={this.setPlayer1}/>}

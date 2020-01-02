@@ -15,7 +15,7 @@ export class TeamBio extends Component {
                 </div>
                 <div className="six wide column">
                     <div className="ui tiny images">
-                      <img className="ui tiny image" src={this.props.team.logo} />
+                      <img className="ui tiny image" src={this.props.team.logo} alt={this.props.team.full_name}/>
                     </div>
                 </div>
             </div>

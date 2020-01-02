@@ -16,6 +16,10 @@ export class SimTeamBio extends Component {
 
     return (
       <div>
+        <img src={this.props.team.logo} alt={this.props.team.full_name} style={{
+          width: "100px",
+          height: "100%"
+        }}/>
         <h2>{this.props.team.full_name}</h2>
         {this.props.roster.length === 0 ? <button onClick={this.handleClick}>Try Another Team</button> : <h3>{this.props.roster[0].season.year}</h3>}
         <div className="ui list">

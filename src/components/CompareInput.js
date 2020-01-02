@@ -8,7 +8,7 @@ export class CompareInput extends Component {
   
   render() {
     return (
-      <div className="ui blue inverted segment">
+      <div className="ui segment thing">
         <div className="ui blue inverted form">
           <label>Player Name</label>
           <input placeholder='Enter a name' onKeyDown={this.handleKeyDown} />

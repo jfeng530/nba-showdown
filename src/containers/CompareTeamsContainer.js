@@ -45,6 +45,10 @@ export class CompareTeamsContainer extends Component {
 
     return (
       <div className="ui container">
+        <h4 class="ui horizontal divider header">
+          <i class="sync icon"></i>
+          Compare Team
+        </h4>
           <div className="ui two column grid">
               <div className="column">
                   {this.state.team1 ? <CompareTeamBio resetTeam1={this.resetTeam1} team={this.state.team1} roster={this.state.team1roster}/> : <CompareTeamCard setTeam1={this.setTeam1}/>}

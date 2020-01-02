@@ -5,11 +5,13 @@ export class PlayerListItem extends Component {
     render() {
         const {player} = this.props
         return (
-            <tr>
-                <td>
-                <NavLink to={"/players/" + player.id}>{player.first_name} {player.last_name}</NavLink>
-                </td>
-            </tr>
+            <div className="item">
+                <div className="content">
+                    <h6 className="header">
+                        <NavLink to={"/players/" + player.id}>{player.first_name} {player.last_name}</NavLink>
+                    </h6>
+                </div>
+            </div>
         );
     }
 }
