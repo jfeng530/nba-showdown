@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 export class TeamBio extends Component {
 
   render() {
-    debugger
     return (
       <div className="ui grid">
             <div className="row">

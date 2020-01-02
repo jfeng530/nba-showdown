@@ -27,7 +27,7 @@
 }
 
 .navbar-item{
-  background-color: #1D428A !important;
+  background-color: rgb(29, 66, 138) !important;
   color: white !important;
 }
 
@@ -35,3 +35,11 @@
   background-color: white !important;
   color: #1D428A !important;
 }
+
+#title {
+  background-image: url(https://publicsectorconsultants.com/wp-content/uploads/2019/01/Basketball-Court-with-Crowd.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 128px 16px;
+}
+
