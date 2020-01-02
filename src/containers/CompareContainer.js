@@ -26,8 +26,8 @@ export class CompareContainer extends Component {
     render() {
         return (
             <div className="ui container">
-                <h4 class="ui horizontal divider header">
-                    <i class="sync icon"></i>
+                <h4 className="ui horizontal divider header">
+                    <i className="sync icon"></i>
                     Compare Players
                 </h4>
                 <br></br>

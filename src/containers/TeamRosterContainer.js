@@ -19,7 +19,7 @@ export class TeamRosterContainer extends Component {
         .then(rosterStats => {
             this.setState({
                 rosterStats: rosterStats.sort(function(a, b) {
-                    return a.gp - b.gp
+                    return b.gp - a.gp
                 })
             })
         })
@@ -40,14 +40,14 @@ export class TeamRosterContainer extends Component {
                 <TeamBio team={this.state.team} year={this.state.rosterStats[0]}/>
                 <br></br>
                 <h2>Season Averages</h2>
-                <table className="ui sortable striped celled compact table">
+                <table className="ui selectable striped celled small table">
                     <TeamRosterAvgHeader />
                     <tbody>
                     {renderAvgItems}
                     </tbody>
                 </table>
                 <h2>Season Totals</h2>
-                <table className="ui sortable striped celled compact table">
+                <table className="ui selectable striped celled small table">
                     <TeamRosterListHeader />
                     <tbody>
                     {renderListItems}

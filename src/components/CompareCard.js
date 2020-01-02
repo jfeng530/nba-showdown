@@ -29,7 +29,7 @@ export class CompareCard extends Component {
           this.setState({
               displayPlayers: [],
               selectedPlayer: player,
-              selectedPlayerSeasons: seasons
+              selectedPlayerSeasons: seasons.sort(function(a, b){return a.season.year - b.season.year})
           })
       })
   }

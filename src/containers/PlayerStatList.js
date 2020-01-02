@@ -28,14 +28,14 @@ export class PlayerStatList extends Component {
         return (
             <div className="container ui center aligned">
                 <h2>Per Game Averages</h2>
-                <table className="ui sortable celled compact table">
+                <table className="ui striped selectable celled small table">
                     <PlayerAvgHeader />
                     <tbody>
                     {renderAvgItems}
                     </tbody>
                 </table>
                 <h2>Season Totals</h2>
-                <table className="ui sortable celled compact table">
+                <table className="ui striped selectable celled small table">
                     <PlayerStatHeader />
                     <tbody>
                     {renderListItems}
