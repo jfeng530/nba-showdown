@@ -13,10 +13,10 @@ class App extends React.Component {
   }
 
   componentDidMount = async() => {
-    let rawData = await fetch('http://nba-showdown.herokuapp.com/teams')
+    let rawData = await fetch('https://nba-showdown.herokuapp.com/teams')
     let teams = await rawData.json()
     this.props.populateTeams(teams)
-    let moreData = await fetch('http://nba-showdown.herokuapp.com/players')
+    let moreData = await fetch('https://nba-showdown.herokuapp.com/players')
     let players = await moreData.json()
     this.props.populatePlayers(players)
     this.setState({
