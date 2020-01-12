@@ -2,7 +2,7 @@
   "name": "nba-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jfeng530.github.io/nba_frontend/",
+  "homepage": "http://jfeng530.github.io/nba_frontend/",
   "dependencies": {
     "bootstrap": "^4.4.1",
     "react": "^16.9.0",
