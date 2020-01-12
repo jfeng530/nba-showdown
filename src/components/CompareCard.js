@@ -22,7 +22,7 @@ export class CompareCard extends Component {
   }
 
   handlePlayerClick = (player) => {
-      fetch(`http://localhost:3000/players/${player.id}/stats`)
+      fetch(`http://nba-showdown.herokuapp.com/players/${player.id}/stats`)
       .then(r => r.json())
       .then(seasons => {
         // debugger

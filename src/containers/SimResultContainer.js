@@ -11,7 +11,7 @@ export class SimResultContainer extends Component {
   }
 
   componentDidMount(){
-    fetch(`http://localhost:3000/seasons/${this.props.season1}/${this.props.season2}`)
+    fetch(`http://nba-showdown.herokuapp.com/seasons/${this.props.season1}/${this.props.season2}`)
     .then(r => r.json())
     .then(res => {
       this.setState({

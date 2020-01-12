@@ -10,14 +10,14 @@ export class PlayerShowContainer extends Component {
     }
 
     componentWillMount(){
-        fetch(`http://localhost:3000/players/${this.props.playerId}`)
+        fetch(`http://nba-showdown.herokuapp.com/players/${this.props.playerId}`)
         .then(r => r.json())
         .then(player => {
             this.setState({
                 player: player
             })
         })
-        fetch(`http://localhost:3000/players/${this.props.playerId}/teams`)
+        fetch(`http://nba-showdown.herokuapp.com/players/${this.props.playerId}/teams`)
         .then(r => r.json())
         .then(teams => {
             this.setState({

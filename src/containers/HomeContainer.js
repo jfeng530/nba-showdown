@@ -19,7 +19,7 @@ export class HomeContainer extends Component {
                             <i className="basketball ball icon"/>
                             NBA Showdown
                         </h1>
-                        <p className="desc" style={{color: "rgb(29, 66, 138)"}}>A Worse Version of Basketball Reference</p>
+                        <p className="desc" style={{color: "rgb(29, 66, 138)"}}>The Ultimate NBA Reference Application</p>
                     </header>
 
                     <div className="ui hidden divider"></div>

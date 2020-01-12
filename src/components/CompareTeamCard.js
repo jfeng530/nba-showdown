@@ -11,7 +11,7 @@ export class CompareTeamCard extends Component {
   }
 
   handleTeamClick = (team) => {
-    fetch(`http://localhost:3000/teams/${team.id}`)
+    fetch(`http://nba-showdown.herokuapp.com/teams/${team.id}`)
     .then(r => r.json())
     .then(res => {
       this.setState({
