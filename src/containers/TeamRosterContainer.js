@@ -14,7 +14,7 @@ export class TeamRosterContainer extends Component {
     }
 
     componentDidMount(){
-        fetch(`http://nba-showdown.herokuapp.com/teams/${this.props.teamId}/${this.props.seasonId}`)
+        fetch(`https://nba-showdown.herokuapp.com/teams/${this.props.teamId}/${this.props.seasonId}`)
         .then(r => r.json())
         .then(rosterStats => {
             this.setState({
@@ -23,7 +23,7 @@ export class TeamRosterContainer extends Component {
                 })
             })
         })
-        fetch(`http://nba-showdown.herokuapp.com/teams/${this.props.teamId}`)
+        fetch(`https://nba-showdown.herokuapp.com/teams/${this.props.teamId}`)
         .then(r => r.json())
         .then(team => {
             this.setState({

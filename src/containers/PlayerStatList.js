@@ -11,7 +11,7 @@ export class PlayerStatList extends Component {
     }
 
     componentDidMount(){
-        fetch(`http://nba-showdown.herokuapp.com/players/${this.props.playerId}/stats`)
+        fetch(`https://nba-showdown.herokuapp.com/players/${this.props.playerId}/stats`)
         .then(r => r.json())
         .then(stats => {
             this.setState({
