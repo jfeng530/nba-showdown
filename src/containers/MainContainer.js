@@ -23,7 +23,7 @@ export class MainContainer extends Component {
         return (
             <>
                 <Switch>
-                    <Route exact path="/">
+                    <Route exact path="/nba_frontend/">
                         <HomeContainer />
                     </Route>
 
