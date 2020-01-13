@@ -74,5 +74,4 @@
 # Credits
 
 # License
-MIT
-Copyright 2019 © [Jacky Feng](https://github.com/jfeng530)
+<a href="https://github.com/jfeng530/nba_frontend"><img alt="GitHub license" src="https://img.shields.io/github/license/jfeng530/nba_frontend?style=plastic"></a>Copyright 2019 © [Jacky Feng](https://github.com/jfeng530)
