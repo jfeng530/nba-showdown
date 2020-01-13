@@ -12,7 +12,6 @@
   - [Description](#description)
   - [Features](#features)
   - [Goals](#goals)
-  - [Challenges](#challenges)
 - [Installation](#installation)
     - [Prerequisites](#prerequisites)
     - [Frontend](#frontend)
@@ -38,13 +37,6 @@
   
   ### Goals
   The main goals of this project was to create a dynamic NBA database that can render and show the statistics of NBA players and teams, while offering a more interactive way of comparing players and teams. Wit
-  
-  ### Challenges
-  - Creating an effective workflow to get MVP and deliverables completed before a set deadline
-  - Developing an application that is engaging enough for a user to generate enough traffic to collect on the administrative panel
-  - Designing a gameplay loop that is easy to follow as well as a visual style that is legible and non intrusive
-  - Refactoring large portions of the administrative panel to utilize as little communication between the frontend and backend as possible
-  - Deployment
   
 &nbsp;
 
