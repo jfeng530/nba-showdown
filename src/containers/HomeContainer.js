@@ -28,7 +28,7 @@ export class HomeContainer extends Component {
 
                     <div className="two column row">
                         <div className="column">
-                            <img className="ui large rounded image" src="http://i.imgur.com/kuyqOdO.png" alt="Player Profile"/>
+                            <img className="ui large rounded image" src="https://i.imgur.com/kuyqOdO.png" alt="Player Profile"/>
                         </div>
                         <div className="column">
                             <h2 className="header">Player Profiles</h2>
@@ -61,7 +61,7 @@ export class HomeContainer extends Component {
                             </div>
                         </div>
                         <div className="column">
-                            <img className="ui large rounded image" src="http://i.imgur.com/bVFypps.png" alt="Team Profile"/>
+                            <img className="ui large rounded image" src="https://i.imgur.com/bVFypps.png" alt="Team Profile"/>
                         </div>
                     </div>
 
@@ -70,7 +70,7 @@ export class HomeContainer extends Component {
 
                     <div className="two column row">
                         <div className="column">
-                            <img className="ui large rounded image" src="http://i.imgur.com/QHy2sjA.png" alt="Player Comparison Chart"/>
+                            <img className="ui large rounded image" src="https://i.imgur.com/QHy2sjA.png" alt="Player Comparison Chart"/>
                         </div>
                         <div className="column">
                             <h2 className="header">Player Comparison Chart</h2>
@@ -104,7 +104,7 @@ export class HomeContainer extends Component {
                             </div>
                         </div>
                         <div className="column">
-                            <img className="ui large rounded image" src="http://i.imgur.com/AVGQO4p.png" alt="Simulation of Game"/>
+                            <img className="ui large rounded image" src="https://i.imgur.com/AVGQO4p.png" alt="Simulation of Game"/>
                         </div>
                     </div>
 
