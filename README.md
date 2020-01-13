@@ -74,6 +74,6 @@
 # Credits
 
 # License
-<img alt="APM" src="https://img.shields.io/apm/l/vim-mode">
+<a href="https://mit-license.org/"><img alt="APM" src="https://img.shields.io/apm/l/vim-mode"></a>
 
 Copyright 2019 © [Jacky Feng](https://github.com/jfeng530)
