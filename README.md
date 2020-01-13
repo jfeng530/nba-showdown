@@ -38,7 +38,7 @@
     - Function written to compute season totals was an O(n²) algorithm
   - Simulation algorithm needed to return accurate and realistic statistics that reflect a player's performance from that year
     - Decided on 'Normal Probability Model' as foundation for algorithm
-    - Used gems [rubystats](https://github.com/phillbaker/rubystats) and [ruby_native_statistics](https://github.com/corybuecker/ruby-native-statistics) to randomly generate a statistic based on normal distribution (relative to player's season performance)
+    - Used gems [Rubystats](https://github.com/phillbaker/rubystats) and [Ruby Native Statistics](https://github.com/corybuecker/ruby-native-statistics) to randomly generate a statistic based on normal distribution (relative to player's season performance)
     
   ### Technologies and Frameworks
   #### Front-End
@@ -52,8 +52,8 @@
   - [Ruby](https://www.ruby-lang.org/en/)
   - [Ruby on Rails](https://rubyonrails.org/)
   - [PostgreSQL](https://www.postgresql.org/)
-  - [rubystats](https://github.com/phillbaker/rubystats)
-  - [ruby_native_statistics](https://github.com/corybuecker/ruby-native-statistics)
+  - [Rubystats](https://github.com/phillbaker/rubystats)
+  - [Ruby Native Statistics](https://github.com/corybuecker/ruby-native-statistics)
 
 &nbsp;
  
