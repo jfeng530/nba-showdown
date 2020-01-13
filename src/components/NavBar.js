@@ -7,7 +7,7 @@ export class NavBar extends Component {
         return (
             <div className="container ui">
                 <div className="ui top menu navbar" >
-                    <NavLink exact to="/" className="item navbar-item">
+                    <NavLink exact to="/nba_frontend" className="item navbar-item">
                         Home
                     </NavLink>
                     <NavLink to="/players" className="item navbar-item">
