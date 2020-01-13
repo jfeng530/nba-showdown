@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/nba_frontend/static/css/main.38381cda.chunk.css",
-    "main.js": "/nba_frontend/static/js/main.307e4916.chunk.js",
-    "main.js.map": "/nba_frontend/static/js/main.307e4916.chunk.js.map",
-    "runtime-main.js": "/nba_frontend/static/js/runtime-main.f0b576db.js",
-    "runtime-main.js.map": "/nba_frontend/static/js/runtime-main.f0b576db.js.map",
-    "static/css/2.17e5ed98.chunk.css": "/nba_frontend/static/css/2.17e5ed98.chunk.css",
-    "static/js/2.9ae2b32e.chunk.js": "/nba_frontend/static/js/2.9ae2b32e.chunk.js",
-    "static/js/2.9ae2b32e.chunk.js.map": "/nba_frontend/static/js/2.9ae2b32e.chunk.js.map",
-    "index.html": "/nba_frontend/index.html",
-    "precache-manifest.20fa0287ef4ef0047a9f48e96f5063a3.js": "/nba_frontend/precache-manifest.20fa0287ef4ef0047a9f48e96f5063a3.js",
-    "service-worker.js": "/nba_frontend/service-worker.js",
-    "static/css/2.17e5ed98.chunk.css.map": "/nba_frontend/static/css/2.17e5ed98.chunk.css.map",
-    "static/css/main.38381cda.chunk.css.map": "/nba_frontend/static/css/main.38381cda.chunk.css.map"
+    "main.css": "/nba-showdown/static/css/main.38381cda.chunk.css",
+    "main.js": "/nba-showdown/static/js/main.1210f03f.chunk.js",
+    "main.js.map": "/nba-showdown/static/js/main.1210f03f.chunk.js.map",
+    "runtime-main.js": "/nba-showdown/static/js/runtime-main.14a53e40.js",
+    "runtime-main.js.map": "/nba-showdown/static/js/runtime-main.14a53e40.js.map",
+    "static/css/2.17e5ed98.chunk.css": "/nba-showdown/static/css/2.17e5ed98.chunk.css",
+    "static/js/2.b770b9db.chunk.js": "/nba-showdown/static/js/2.b770b9db.chunk.js",
+    "static/js/2.b770b9db.chunk.js.map": "/nba-showdown/static/js/2.b770b9db.chunk.js.map",
+    "index.html": "/nba-showdown/index.html",
+    "precache-manifest.6c38a0626c913ede47fd901d2efe8ecf.js": "/nba-showdown/precache-manifest.6c38a0626c913ede47fd901d2efe8ecf.js",
+    "service-worker.js": "/nba-showdown/service-worker.js",
+    "static/css/2.17e5ed98.chunk.css.map": "/nba-showdown/static/css/2.17e5ed98.chunk.css.map",
+    "static/css/main.38381cda.chunk.css.map": "/nba-showdown/static/css/main.38381cda.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.f0b576db.js",
+    "static/js/runtime-main.14a53e40.js",
     "static/css/2.17e5ed98.chunk.css",
-    "static/js/2.9ae2b32e.chunk.js",
+    "static/js/2.b770b9db.chunk.js",
     "static/css/main.38381cda.chunk.css",
-    "static/js/main.307e4916.chunk.js"
+    "static/js/main.1210f03f.chunk.js"
   ]
 }
