@@ -12,7 +12,7 @@
   - [Description](#description)
   - [Features](#features)
   - [Challenges](#challenges)
-  - [Technologies & Frameworks](#technologies-&-frameworks)
+  - [Technologies & Frameworks](#technologies-and-frameworks)
 - [Installation](#installation)
     - [Prerequisites](#prerequisites)
     - [Instructions](#instructions)
