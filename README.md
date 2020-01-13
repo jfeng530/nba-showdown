@@ -72,6 +72,8 @@
 &nbsp;
 
 # Credits
+  - [balldontlie API](https://www.balldontlie.io/)
+  - Abraham Rabinowitz
 
 # License
 <a href="https://mit-license.org/"><img alt="APM" src="https://img.shields.io/apm/l/vim-mode"></a>
