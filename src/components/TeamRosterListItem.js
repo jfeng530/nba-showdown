@@ -10,7 +10,7 @@ export class TeamRosterListItem extends Component {
         return (
             <tr className="center aligned">
                 <td>
-                    <NavLink to={"/players/" + stat.player.id }>{stat.player.first_name} {stat.player.last_name}</NavLink>
+                    <NavLink to={"/nba_frontend/players/" + stat.player.id }>{stat.player.first_name} {stat.player.last_name}</NavLink>
                 </td>
                 <td>{stat.gp}</td>
                 <td>{stat.fgm}</td>

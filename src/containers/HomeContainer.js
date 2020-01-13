@@ -37,7 +37,7 @@ export class HomeContainer extends Component {
                                 <p>View individual player profile and statistics including per-game-averages and season totals.</p>
                                 <p>Includes every player that has played in the NBA from 1979 to 2019.</p>
                                 <br></br>
-                                <NavLink to="/players">
+                                <NavLink to="/nba_frontend/players">
                                     <button className="ui inverted orange button">Search for Player</button>
                                 </NavLink>
                             </div>
@@ -55,7 +55,7 @@ export class HomeContainer extends Component {
                                 <p>View team stats from a specific season.</p>
                                 <p>See season stats of every player who played on that team that year.</p>
                                 <br></br>
-                                <NavLink to="/teams">
+                                <NavLink to="/nba_frontend/teams">
                                     <button className="ui inverted orange button">View All Teams</button>
                                 </NavLink>
                             </div>
@@ -79,7 +79,7 @@ export class HomeContainer extends Component {
                                 <p>Compare players from across the generations</p>
                                 <p>Dynamically view the better performance based on season totals and averages</p>
                                 <br></br>
-                                <NavLink to="/players">
+                                <NavLink to="/nba_frontend/players">
                                     <button className="ui inverted orange button">Compare Players</button>
                                 </NavLink>
                             </div>
@@ -98,7 +98,7 @@ export class HomeContainer extends Component {
                                 <p>Simulate a game between teams from any era.</p>
                                 <p>View the box score of the simulated game, with accurate and reliable results.</p>
                                 <br></br>
-                                <NavLink to="/teams">
+                                <NavLink to="/nba_frontend/teams">
                                     <button className="ui inverted orange button">Simulate a Game</button>
                                 </NavLink>
                             </div>
