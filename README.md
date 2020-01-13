@@ -77,6 +77,6 @@
   - Abraham Rabinowitz
 
 # License
-<a href="https://mit-license.org/"><img alt="APM" src="https://img.shields.io/apm/l/vim-mode"></a>
+<a href="https://github.com/jfeng530/nba_frontend/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/jfeng530/nba_frontend?color=blue"></a>
 
 Copyright 2019 © [Jacky Feng](https://github.com/jfeng530)
