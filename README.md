@@ -14,7 +14,7 @@
   - [Challenges](#challenges)
 - [Installation](#installation)
     - [Prerequisites](#prerequisites)
-    - [Frontend](#frontend)
+    - [Instructions](#instructions)
 - [Credits](#credits)
 
 &nbsp;
@@ -53,9 +53,9 @@
   - [PostgreSQL](https://www.postgresql.org/)
   - [rubystats](https://github.com/phillbaker/rubystats)
   - [ruby_native_statistics](https://github.com/corybuecker/ruby-native-statistics)
-  
-&nbsp;
 
+&nbsp;
+ 
 # Installation
   ### Prerequisites
   NBA Showdown is built on React, Ruby, Ruby on Rails & PostgreSQL. Make sure you have the latest versions of all four components installed before cloning this repo. You can find their official installation guides below:
@@ -64,11 +64,15 @@
   - [Ruby On Rails](https://guides.rubyonrails.org/v5.0/getting_started.html)
   - [PostgreSQL](https://www.postgresqltutorial.com/)
   
-&nbsp;
-
   ### Instructions
   - Clone the most recent branch in this repository
   - Run `npm install` in your bash-enabled terminal to make sure all dependancies are installed
   - Run `npm start` to start and launch local server on your browser
 
 &nbsp;
+
+# Credits
+
+# License
+MIT
+Copyright 2019 © [Jacky Feng](https://github.com/jfeng530)
