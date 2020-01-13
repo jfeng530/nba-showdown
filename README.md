@@ -1,4 +1,4 @@
-<p align="center"><img width=75% src="https://i.imgur.com/6Ky5MZE.png"></p>
+<p align="center"><img width=50% src="https://i.imgur.com/6Ky5MZE.png"></p>
 <p>
   <img align="center" src="https://img.shields.io/badge/Postgresql-12.1-336791">
   <img align="center" src="https://img.shields.io/badge/React.JS-16.12.0-61DAFB">
@@ -10,7 +10,7 @@
 # Contents
 - [Introduction](#introduction)
   - [Description](#description)
-  - [Key Features](#key-features)
+  - [Features](#features)
   - [Goals](#goals)
   - [Challenges](#challenges)
 - [Installation](#installation)
@@ -27,25 +27,17 @@
 
 # Introduction
   ### Description
-  NBA Showdown is an NBA reference web application. View statistics of your favorite NBA players and teams from 1979 to the present. Compare players and teams from different eras. Simulate a game between your dream matchup to see who will come out on top.
+  NBA Showdown is an NBA statistics and simulation web application. Utilizing React and Redux, NBA Showdown dynamically renders and shows statistics of any player and any team from 1979 to 2019. 
   
-  ### Key Features
-  - 250 trivia questions to answer
-  - 3 difficulty levels
-  - 20 categories
-  - Statisically generated user ratings
-  - Login/Signup secured with bcrypt & JWT Auth
-  - Easy to access API functionality using FastJSON API for derivated work
-  - Access Restricted administrative panel featuring realtime page & element tracking & in-browser database editor
-  - Vote/Comment on trivia questions after answering a question
-  - Conditional rendering and keyframe animations  
-  - Message other users (TBA)
-  - Challenge other users to answer questions (TBA)
-  - Custom Statisically Analytics Queries for Administrators/Developers (TBA)
-  - Fun for the whole family
+  ### Features
+  - Features all teams and players in the NBA from 1979 to 2019
+  - Search for and view season totals and averages of any NBA player
+  - View season totals and averages of any NBA team
+  - Compare statistics of any two NBA players and any two NBA teams (with season totals and season averages)
+  - Simulate a game between two NBA teams from any season & view the box score of the simulated game
   
   ### Goals
-  The two main goals of the project is to develop an application that was engaging to the end user, as well as explore potentialities to collect and curate user generated data in real time. 
+  The main goals of this project was to create a dynamic NBA database that can render and show the statistics of NBA players and teams, while offering a more interactive way of comparing players and teams. Wit
   
   ### Challenges
   - Creating an effective workflow to get MVP and deliverables completed before a set deadline
