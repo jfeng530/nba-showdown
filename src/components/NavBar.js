@@ -10,20 +10,20 @@ export class NavBar extends Component {
                     <NavLink exact to="/nba_frontend" className="item navbar-item">
                         Home
                     </NavLink>
-                    <NavLink to="/players" className="item navbar-item">
+                    <NavLink to="/nba_frontend/players" className="item navbar-item">
                         Players
                     </NavLink>
-                    <NavLink to="/teams" className="item navbar-item">
+                    <NavLink to="/nba_frontend/teams" className="item navbar-item">
                         Teams
                     </NavLink>
                     <div className="right menu">
-                        <NavLink to="/compareplayers" className="ui item navbar-item">
+                        <NavLink to="/nba_frontend/compareplayers" className="ui item navbar-item">
                             Compare Players
                         </NavLink>
-                        <NavLink to="/compareteams" className="ui item navbar-item">
+                        <NavLink to="/nba_frontend/compareteams" className="ui item navbar-item">
                             Compare Teams
                         </NavLink>
-                        <NavLink to="/simulate" className="ui item navbar-item">
+                        <NavLink to="/nba_frontend/simulate" className="ui item navbar-item">
                             Simulate Game
                         </NavLink>
                     </div>

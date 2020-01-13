@@ -27,46 +27,46 @@ export class MainContainer extends Component {
                         <HomeContainer />
                     </Route>
 
-                    <Route exact path="/players" >
+                    <Route exact path="/nba_frontend/players" >
                         <PlayersContainer players={this.state.players}/>
                         {/* <PlayersContainer players={this.state.players}/> */}
                     </Route>
 
                     {/* To render a Player Show page */}
-                    <Route exact path="/players/:id" >
+                    <Route exact path="/nba_frontend/players/:id" >
                         {this.renderPlayer}
                     </Route>
 
                     {/* To render a list of all Teams */}
-                    <Route exact path="/teams" >
+                    <Route exact path="/nba_frontend/teams" >
                         <ShowTeams teams={this.props.teams}/>
                     </Route>
                     
                     {/* To render a list of all seasons by a single team */}
-                    <Route exact path="/teams/:id" >
+                    <Route exact path="/nba_frontend/teams/:id" >
                         {this.renderTeamYears}
                     </Route>
 
                     {/* To render the roster of a specifc Team + Season */}
-                    <Route exact path="/teams/:id/:season" >
+                    <Route exact path="/nba_frontend/teams/:id/:season" >
                         {this.renderTeamRoster}
                     </Route>
 
                     {/* To render the compare Players/Teams page */}
-                    <Route exact path="/compareplayers" >
+                    <Route exact path="/nba_frontend/compareplayers" >
                         <CompareContainer />
                     </Route>
 
                     {/* To render the compare Teams page */}
-                    <Route exact path="/compareteams" >
+                    <Route exact path="/nba_frontend/compareteams" >
                         <CompareTeamsContainer />
                     </Route>
 
-                    <Route exact path="/simulate">
+                    <Route exact path="/nba_frontend/simulate">
                         <SimulateContainer />
                     </Route>
 
-                    <Route exact path="/simulate/:teamone/:teamtwo">
+                    <Route exact path="/nba_frontend/simulate/:teamone/:teamtwo">
                         {this.renderSimResults}
                     </Route>
                 </Switch>
