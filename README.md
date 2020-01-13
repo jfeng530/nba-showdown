@@ -18,6 +18,7 @@
     - [Instructions](#instructions)
     - [Back-End](#back-end-1)
 - [Credits](#credits)
+- [License](#license)
 
 &nbsp;
 
