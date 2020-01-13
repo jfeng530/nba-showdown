@@ -8,7 +8,7 @@ export class PlayerListItem extends Component {
             <div className="item">
                 <div className="content">
                     <h6 className="header">
-                        <NavLink to={"/nba_frontend/players/" + player.id}>{player.first_name} {player.last_name}</NavLink>
+                        <NavLink to={"/nba-showdown/players/" + player.id}>{player.first_name} {player.last_name}</NavLink>
                     </h6>
                 </div>
             </div>

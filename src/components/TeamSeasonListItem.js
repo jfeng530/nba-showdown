@@ -11,7 +11,7 @@ const TeamSeasonListItem = (props) => {
         <>
             <tr>
                 <td>
-                    <NavLink to={"/nba_frontend/teams/" + team.id + "/" + season.year }>{season.year}</NavLink>
+                    <NavLink to={"/nba-showdown/teams/" + team.id + "/" + season.year }>{season.year}</NavLink>
                 </td>
             </tr>
         </>
