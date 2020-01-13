@@ -69,6 +69,9 @@
   - Clone the most recent branch in this repository
   - Run `npm install` in your bash-enabled terminal to make sure all dependancies are installed
   - Run `npm start` to start and launch local server on your browser
+  
+  ### Back-End
+  [NBA Showdown Back-End](https://github.com/jfeng530/nba_backend)
 
 &nbsp;
 
