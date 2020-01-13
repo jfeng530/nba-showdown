@@ -98,7 +98,7 @@ export class HomeContainer extends Component {
                                 <p>Simulate a game between teams from any era.</p>
                                 <p>View the box score of the simulated game, with accurate and reliable results.</p>
                                 <br></br>
-                                <NavLink to="/nba_frontend/teams">
+                                <NavLink to="/nba_frontend/simulate">
                                     <button className="ui inverted orange button">Simulate a Game</button>
                                 </NavLink>
                             </div>
