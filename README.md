@@ -34,8 +34,8 @@
   - Simulate a game between two NBA teams from any season & view the box score of the simulated game
   
   ### Challenges
-  - The data in the reference API used to create the back-end did not include season totals for players.
-    - Required mapping over all players and comuting their season totals and thus their averages as well.
+  - The data in the reference API used to create the back-end did not include season totals for players
+    - Required mapping over all players and comuting their season totals and thus their averages as well
     - Had to account for a player that was traded mid-season (each team played for that year would represent a new instance of season)
     - Function written to compute season totals was an O(n²) algorithm
   - Simulation algorithm needed to return accurate and realistic statistics that reflect a player's performance from that year
