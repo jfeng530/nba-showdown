@@ -55,7 +55,7 @@ export class SimulateContainer extends Component {
                   {this.state.team2 && this.state.team2roster ? <SimTeamBio resetTeam2={this.resetTeam2} team={this.state.team2} roster={this.state.team2roster}/> : <CompareTeamCard setTeam2={this.setTeam2}/>} 
               </div>
           </div>
-          {this.state.team1roster.length !== 0 && this.state.team2roster.length !== 0 ? <NavLink to={"/nba-showdown/simulate/" + this.state.team1roster[0].season.id + "/" + this.state.team2roster[0].season.id}><button className="ui inverted orange button">Start Simulation</button></NavLink> : null}
+          {this.state.team1roster.length !== 0 && this.state.team2roster.length !== 0 ? <NavLink to={"/simulate/" + this.state.team1roster[0].season.id + "/" + this.state.team2roster[0].season.id}><button className="ui inverted orange button">Start Simulation</button></NavLink> : null}
       </div>
     )
   }

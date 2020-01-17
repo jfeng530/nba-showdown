@@ -8,7 +8,7 @@ const TeamListItem = (props) => {
     return (
         <>
         <br></br>
-        <NavLink to={"/nba-showdown/teams/" + team.id}>
+        <NavLink to={"/teams/" + team.id}>
             <div className="item">
                 <img className="logo" src={team.logo} alt={team.full_name}/>
             </div>
