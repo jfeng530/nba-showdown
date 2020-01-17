@@ -2,7 +2,7 @@
   "name": "nba-showdown",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://jfeng530.github.io/nba-showdown/",
+  "homepage": "https://nba-showdown.netlify.com/",
   "dependencies": {
     "bootstrap": "^4.4.1",
     "react": "^16.9.0",
