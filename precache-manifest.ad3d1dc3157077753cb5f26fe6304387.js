@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "654dca6b96f7fd087ba1fd8fef731177",
+    "revision": "ce70aedacdb4a7b7a003f1c52474b3cd",
     "url": "/nba-showdown/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nba-showdown/static/css/2.17e5ed98.chunk.css"
   },
   {
-    "revision": "14c091709268826e416d",
+    "revision": "6d15d964e7881b23b368",
     "url": "/nba-showdown/static/css/main.38381cda.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/nba-showdown/static/js/2.b770b9db.chunk.js"
   },
   {
-    "revision": "14c091709268826e416d",
-    "url": "/nba-showdown/static/js/main.0b0678ec.chunk.js"
+    "revision": "6d15d964e7881b23b368",
+    "url": "/nba-showdown/static/js/main.5264af81.chunk.js"
   },
   {
     "revision": "02536ae8b2cf6427b580",

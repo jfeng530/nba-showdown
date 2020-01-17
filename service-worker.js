@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/nba-showdown/precache-manifest.a8c2f3b9714b4872415958730ef470a7.js"
+  "/nba-showdown/precache-manifest.ad3d1dc3157077753cb5f26fe6304387.js"
 );
 
 self.addEventListener('message', (event) => {
