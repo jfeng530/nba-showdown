@@ -43,8 +43,8 @@ export class SimulateContainer extends Component {
   render() {
     return (
       <div className="ui container">
-        <h4 class="ui horizontal divider header">
-          <i class="gamepad icon"></i>
+        <h4 className="ui horizontal divider header">
+          <i className="gamepad icon"></i>
           Simulate
         </h4>
           <div className="ui two column grid">

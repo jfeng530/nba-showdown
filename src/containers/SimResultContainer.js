@@ -10,16 +10,22 @@ export class SimResultContainer extends Component {
     loaded: false
   }
 
-  componentDidMount(){
-    fetch(`https://nba-showdown.herokuapp.com/seasons/${this.props.season1}/${this.props.season2}`)
-    .then(r => r.json())
-    .then(res => {
-      this.setState({
-        loaded: true,
-        team1: res.team1,
-        team2: res.team2
-      })
-    })
+  async componentDidMount(){
+    try {
+      const res = await fetch(`https://nba-showdown.herokuapp.com/seasons/${this.props.season1}/${this.props.season2}`)
+      if (!res.ok) {
+        throw Error(res.statusText)
+      } else {
+        const json = await res.json()
+        this.setState({
+          loaded: true,
+          team1: json.team1,
+          team2: json.team2
+        })
+      }
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   render() {
