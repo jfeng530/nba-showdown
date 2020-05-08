@@ -24,7 +24,7 @@
 
 # Overview
   ### Description
-  NBA Showdown is a NBA statistics and simulation web application. Utilizing Ruby on Rails, React and React Redux, NBA Showdown dynamically renders and displays data of any player and any team from 1979 to 2019 as well as simulate a game between any two teams.
+  NBA Showdown is an NBA statistics and simulation web application. Utilizing Ruby on Rails, React, and React Redux, NBA Showdown dynamically renders and displays data of any player and any team from 1979 to 2019 as well as simulates a game between any two teams.
   
   ### Features
   - Features all teams and players in the NBA from 1979 to 2019
@@ -61,7 +61,7 @@
  
 # Installation
   ### Prerequisites
-  NBA Showdown is built on React, Ruby, Ruby on Rails & PostgreSQL. Make sure you have the latest versions of all four components installed before cloning this repo. You can find their official installation guides below:
+  NBA Showdown is built on React, Ruby, Ruby on Rails, and PostgreSQL. Make sure you have the latest versions of all four components installed before cloning this repo. You can find their official installation guides below:
   - [React](https://reactjs.org/docs/getting-started.html)
   - [Ruby](https://www.ruby-lang.org/en/documentation/installation/)
   - [Ruby On Rails](https://guides.rubyonrails.org/v5.0/getting_started.html)
